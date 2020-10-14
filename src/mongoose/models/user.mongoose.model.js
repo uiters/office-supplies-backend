@@ -28,12 +28,14 @@ userSchema.methods.createToken = function () {
     return jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, "JWT_SECRET");
 };
 
+// IN: PASSWORD:string =>> OUT: HASHPASSWORD 
 userSchema.methods.hashPass = async function ({ password }) {
     let salt = await bcrypt.genSalt(10);
     const newPassword = await bcrypt.hash(password, salt);
     return newPassword;
 };
 
+// IN: REQUEST PASSWORD =>> OUT VALID: Boolean
 userSchema.methods.comparePass = async function(inputPass, userPass){
   const valid = await bcrypt.compare(inputPass, userPass);
   return valid;
