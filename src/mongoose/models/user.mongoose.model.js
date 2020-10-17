@@ -31,8 +31,7 @@ userSchema.methods.createToken = function () {
 // IN: PASSWORD:string =>> OUT: HASHPASSWORD 
 userSchema.methods.hashPass = async function ({ password }) {
     let salt = await bcrypt.genSalt(10);
-    const newPassword = await bcrypt.hash(password, salt);
-    return newPassword;
+    return await bcrypt.hash(password, salt);
 };
 
 // IN: REQUEST PASSWORD =>> OUT VALID: Boolean
