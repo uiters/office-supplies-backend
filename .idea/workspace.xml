@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b6ba6c0-1cf0-4913-9565-3055b71000a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mongoose/models/user.mongoose.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mongoose/models/user.mongoose.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/user.route.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +48,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602930472900</updated>
-      <workItem from="1602930477219" duration="3882000" />
+      <workItem from="1602930477219" duration="4654000" />
     </task>
     <servers />
   </component>

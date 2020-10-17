@@ -45,6 +45,10 @@ router.put("/updateuser", auth, async (req, res) => {
 
     let user = await User.findOne({email: newUserInfo.email})
 
+    if (!user) return res.status(404).send({
+        message: 'User not found'
+    })
+
     user = await User.findByIdAndUpdate(
         {_id: user._id},
         {
@@ -55,31 +59,24 @@ router.put("/updateuser", auth, async (req, res) => {
         {new: true}
     )
 
-    // if (!user) return res.status(404).send({message: 'User not found'});
-    //
-    // newUserInfo.password = await user.hashPass(newUserInfo);
-    //
-    // await user.updateOne({email: user.email}, {
-    //     $set: {
-    //         password: newUserInfo.password,
-    //         profile: newUserInfo.profile,
-    //     }
-    // })
-    // console.log(user);
-    // try {
-    //     await user.save()
-    //     res.status(200).send({
-    //         message: 'user has been updated successfully',
-    //         user: user,
-    //         newUserInfo
-    //     })
-    // } catch (err) {
-    //     console.log(err)
-    // }
     res.status(200).send({
         message: 'user has been updated successfully',
         user
     })
 })
+
+/*
+@ POST: Delete user
+** MUST BE LOGGED IN WITH ADMIN ACCOUNT TO DELETE USER **
+ */
+
+router.post('/deleteuser', [auth, admin], async (req, res) => {
+    let user = await User.findOneAndDelete({email: req.body.email});
+    if (!user) return res.status(404).send({message: 'User not found'});
+    res.send({
+        message: `user with email ${user.email} has been deleted`
+    });
+})
+
 
 module.exports = router;
