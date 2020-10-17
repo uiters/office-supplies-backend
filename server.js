@@ -1,12 +1,19 @@
 const express = require("express");
-const app = express();
 const mongoose = require("mongoose");
+const dotenv = require('dotenv') 
+
 const authRoute = require("./src/router/auth.route");
 const userRoute = require("./src/router/user.route");
 const categoryRoute = require("./src/router/category.route");
 
+
+dotenv.config();
+
+const app = express();
+app.use(express.json());
+
 mongoose
-    .connect("mongodb://localhost:27017/office-and-book", {
+    .connect(process.env.CONNECTION_STRING, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
@@ -15,16 +22,12 @@ mongoose
     .then(() => {
         console.log("connect to mongoDb");
     })
-    .catch((err) => console.log);
-
-app.use(express.json());
-
-const port = 3000;
+    .catch(console.log);
 
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 app.use("/api/category", categoryRoute);
 
-app.listen(port, () => {
-    console.log("sever is running in port ", port);
+app.listen(process.env.PORT, () => {
+    console.log("sever is running in port ", process.env.PORT);
 });

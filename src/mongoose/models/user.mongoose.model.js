@@ -25,19 +25,18 @@ const userSchema = new Schema({
 });
 
 userSchema.methods.createToken = function () {
-    return jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, "JWT_SECRET");
+    return jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, process.env.SECRET_KEY);
 };
 
-// IN: PASSWORD:string =>> OUT: HASHPASSWORD 
+// IN: PASSWORD:string =>> OUT: HASH PASSWORD
 userSchema.methods.hashPass = async function ({ password }) {
     let salt = await bcrypt.genSalt(10);
     return await bcrypt.hash(password, salt);
 };
 
-// IN: REQUEST PASSWORD =>> OUT VALID: Boolean
+// IN: REQUEST PASSWORD: string =>> OUT: VALID: Boolean
 userSchema.methods.comparePass = async function(inputPass, userPass){
-  const valid = await bcrypt.compare(inputPass, userPass);
-  return valid;
+    return await bcrypt.compare(inputPass, userPass);
 }
 
 const User = mongoose.model("user", userSchema);
