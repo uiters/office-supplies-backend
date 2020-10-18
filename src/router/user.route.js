@@ -7,7 +7,10 @@ const {User} = require("../mongoose/models/user.mongoose.model");
 
 router.get("/", [auth, admin], async (req, res) => {
     let user = await User.find();
-    res.status(200).send(user);
+    res.status(200).send({
+        user,
+        fullName: user[0].fullName
+    });
 });
 
 /*
@@ -25,7 +28,6 @@ router.post("/register", async (req, res) => {
         isAdmin: req.body.isAdmin | false,
         status: req.body.status | 0
     });
-    user.password = await user.hashPass(user);
 
     try {
         await user.save();
@@ -40,9 +42,6 @@ router.post("/register", async (req, res) => {
  */
 router.put("/updateuser", auth, async (req, res) => {
     let newUserInfo = req.body;
-
-    let salt = await bcrypt.genSalt(10);
-    newUserInfo.password = await bcrypt.hash(newUserInfo.password, salt);
 
     let user = await User.findOne({email: newUserInfo.email})
 

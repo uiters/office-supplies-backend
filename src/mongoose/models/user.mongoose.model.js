@@ -4,8 +4,8 @@ const bcrypt = require("bcrypt");
 const { Schema } = mongoose;
 
 const userStatus = {
-    0: 'active',
-    1: 'deactive'
+   'active': 0,
+    'deactive': 1,
 }
 
 const userSchema = new Schema({
@@ -22,6 +22,11 @@ const userSchema = new Schema({
         firstName: String,
         lastName: String,
         phoneNumber: String,
+        address: {
+            city: String,
+            district: String,
+            street: String
+        }
     },
     isAdmin: {
         type: Boolean,
@@ -31,6 +36,7 @@ const userSchema = new Schema({
         type: Number,
         validate: {
             validator: (status) => {
+                console.log(Object.values(userStatus).includes(status))
                 return Object.values(userStatus).includes(status)
             }
         }
@@ -38,20 +44,24 @@ const userSchema = new Schema({
 
 });
 
-userSchema.methods.createToken = function () {
-    return jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, process.env.SECRET_KEY);
-};
-
-// IN: PASSWORD:string =>> OUT: HASH PASSWORD
-userSchema.methods.hashPass = async function ({ password }) {
+/*
+  Password has middleware
+ */
+userSchema.pre('save', async function(next){
     let salt = await bcrypt.genSalt(10);
-    return await bcrypt.hash(password, salt);
-};
+    this.password = await bcrypt.hash(this.password, salt);
+    next();
+})
 
 // IN: REQUEST PASSWORD: string =>> OUT: VALID: Boolean
 userSchema.methods.comparePass = async function(inputPass, userPass){
     return await bcrypt.compare(inputPass, userPass);
 }
+
+// Virtual
+userSchema.virtual('fullName').get(function(){
+    return `${this.profile.firstName} ${this.profile.lastName}`;
+})
 
 const User = mongoose.model("user", userSchema);
 

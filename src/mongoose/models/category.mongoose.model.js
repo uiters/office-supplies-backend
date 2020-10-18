@@ -7,7 +7,8 @@ const CategorySchema = new mongoose.Schema({
         required: true,
     },
     subCategory: {
-        type: Array
+        type: [String],
+        index: true
     },
 })
 
