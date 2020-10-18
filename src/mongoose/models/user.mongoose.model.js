@@ -36,7 +36,6 @@ const userSchema = new Schema({
         type: Number,
         validate: {
             validator: (status) => {
-                console.log(Object.values(userStatus).includes(status))
                 return Object.values(userStatus).includes(status)
             }
         }

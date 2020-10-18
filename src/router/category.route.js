@@ -1,52 +1,58 @@
-const {Category} = require("../mongoose/models/category.mongoose.model");
+const { Category } = require("../mongoose/models/category.mongoose.model");
 const router = require("express").Router();
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
     const categories = await Category.find();
     res.status(200).send({
-        message: 'success',
-        categories
-    })
-})
+        message: "success",
+        categories,
+    });
+});
 
 /*
 @ POST: Create category & subcategory
  */
 
-router.post('/', async (req, res) => {
-    let category = await Category.findOne({categoryName: req.body.categoryName.toLowerCase()});
-    if (category) return res.status(406).send({
-        message: 'category already exist'
-    })
+router.post("/", async (req, res) => {
+    let category = await Category.findOne({
+        categoryName: req.body.categoryName.toLowerCase(),
+    });
+    if (category)
+        return res.status(406).send({
+            message: "category already exist",
+        });
 
     category = new Category({
         categoryName: req.body.categoryName.toLowerCase(),
-        subCategory: req.body.subCategory
-    })
+        subCategory: req.body.subCategory,
+    });
 
     try {
         await category.save();
         res.status(201).send({
-            message: 'success',
-            category
-        })
+            message: "success",
+            category,
+        });
     } catch (err) {
-        console.log(err)
+        console.log(err);
     }
-})
+});
 
 /*
 @ PUT: Update subcategory
  */
 
-router.put('/updatecategory', async (req, res) => {
-    let category = await Category.findOne({categoryName: req.body.categoryName.toLowerCase()});
+router.put("/updatecategory", async (req, res) => {
+    let category = await Category.findOne({
+        categoryName: req.body.categoryName.toLowerCase(),
+    });
     let newSubCategory = [...category.subCategory, ...req.body.subCategory];
-    let result = {}
+    let result = {};
 
-    if (!category) return res.status(404).send({
-        message: 'category not found'
-    })
+    if (!category)
+        return res.status(404).send({
+            message: "category not found",
+        });
 
     for (let category of newSubCategory) {
         if (!result.hasOwnProperty(category)) {
@@ -54,60 +60,75 @@ router.put('/updatecategory', async (req, res) => {
         }
     }
 
-    newSubCategory = Object.values(result)
+    newSubCategory = Object.values(result);
 
-    category = await Category.findByIdAndUpdate({_id: category._id}, {
-        categoryName: req.body.categoryName.toLowerCase(),
-        subCategory: newSubCategory
-    })
+    category = await Category.findByIdAndUpdate(
+        { _id: category._id },
+        {
+            categoryName: req.body.categoryName.toLowerCase(),
+            subCategory: newSubCategory,
+        }
+    );
 
     res.status(200).send({
-        message: 'subCategory has been updated',
-        category
-    })
-})
+        message: "subCategory has been updated",
+        category,
+    });
+});
 
 /*
 @ PUT: delete 1 subcategory
  */
 router.put("/deletecategory", async (req, res) => {
-    let category = await Category.findOne({categoryName: req.body.categoryName.toLowerCase()})
-
-    if (!category) return res.status(404).send({
-        message: 'category not found'
+    let category = await Category.findOne({
+        categoryName: req.body.categoryName.toLowerCase(),
     });
 
-    const newSubCategory = category.subCategory.filter(cate => cate !== req.body.subCategory)
+    if (!category)
+        return res.status(404).send({
+            message: "category not found",
+        });
 
-    category = await Category.findByIdAndUpdate({_id: category._id}, {
-        categoryName: req.body.categoryName.toLowerCase(),
-        subCategory: newSubCategory
-    }, (err, res) => {
-        console.log(res)
-    })
+    const newSubCategory = category.subCategory.filter(
+        (cate) => cate !== req.body.subCategory
+    );
+
+    category = await Category.findByIdAndUpdate(
+        { _id: category._id },
+        {
+            categoryName: req.body.categoryName.toLowerCase(),
+            subCategory: newSubCategory,
+        },
+        (err, res) => {
+            console.log(res);
+        }
+    );
     try {
         res.status(200).send({
             message: `${req.body.subCategory} has been deleted`,
-            category
-        })
+            category,
+        });
     } catch (err) {
-        console.log(err)
+        console.log(err);
     }
-})
+});
 
 /*
 @ DELETE: Delete category
  */
 
-router.patch('/', async (req, res) => {
-    let category = await Category.findOneAndDelete({categoryName: req.body.categoryName.toLowerCase()});
-    if(!category) return res.status(404).send({
-        message: 'category not found'
-    })
+router.patch("/", async (req, res) => {
+    let category = await Category.findOneAndDelete({
+        categoryName: req.body.categoryName.toLowerCase(),
+    });
+    if (!category)
+        return res.status(404).send({
+            message: "category not found",
+        });
     res.status(200).send({
         message: `${req.body.categoryName} has been deleted`,
-        category
-    })
-})
+        category,
+    });
+});
 
-module.exports = router
+module.exports = router;
