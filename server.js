@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const dotenv = require('dotenv') 
+const dotenv = require('dotenv')
 
 const authRoute = require("./src/router/auth.route");
 const userRoute = require("./src/router/user.route");
@@ -11,6 +11,11 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
+
+app.use(express.static('./dist'));
+app.get("/", (req, res) => {
+    res.sendFile('index.html');
+})
 
 mongoose
     .connect(process.env.CONNECTION_STRING, {

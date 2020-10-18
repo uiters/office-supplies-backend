@@ -3,6 +3,11 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const { Schema } = mongoose;
 
+const userStatus = {
+    0: 'active',
+    1: 'deactive'
+}
+
 const userSchema = new Schema({
     email: {
         type: String,
@@ -22,6 +27,15 @@ const userSchema = new Schema({
         type: Boolean,
         required: true,
     },
+    status: {
+        type: Number,
+        validate: {
+            validator: (status) => {
+                return Object.values(userStatus).includes(status)
+            }
+        }
+    }
+
 });
 
 userSchema.methods.createToken = function () {

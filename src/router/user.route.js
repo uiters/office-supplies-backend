@@ -23,6 +23,7 @@ router.post("/register", async (req, res) => {
         profile: req.body.profile,
         phoneNumber: req.body.phoneNumber,
         isAdmin: req.body.isAdmin | false,
+        status: req.body.status | 0
     });
     user.password = await user.hashPass(user);
 
@@ -55,6 +56,7 @@ router.put("/updateuser", auth, async (req, res) => {
             email: newUserInfo.email,
             password: newUserInfo.password,
             profile: newUserInfo.profile,
+            status: newUserInfo.status
         },
         {new: true}
     )
