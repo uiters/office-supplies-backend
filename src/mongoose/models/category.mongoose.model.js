@@ -12,6 +12,11 @@ const CategorySchema = new mongoose.Schema({
     },
 })
 
+CategorySchema.pre('save', function (next) {
+    this.categoryName = this.categoryName.toLowerCase();
+    next();
+})
+
 const Category = mongoose.model('category', CategorySchema)
 
 module.exports = {

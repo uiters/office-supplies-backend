@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b6ba6c0-1cf0-4913-9565-3055b71000a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mongoose/models/category.mongoose.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mongoose/models/category.mongoose.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mongoose/models/user.mongoose.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mongoose/models/user.mongoose.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/user.route.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +50,7 @@
       <updated>1602930472900</updated>
       <workItem from="1602930477219" duration="4748000" />
       <workItem from="1603015201540" duration="8410000" />
-      <workItem from="1603030619421" duration="2165000" />
+      <workItem from="1603030619421" duration="2625000" />
     </task>
     <servers />
   </component>
