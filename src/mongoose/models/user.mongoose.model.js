@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const { Schema } = mongoose;
+const {Schema} = mongoose;
 
 const userStatus = {
-   'active': 0,
+    'active': 0,
     'deactive': 1,
 }
 
@@ -43,22 +43,32 @@ const userSchema = new Schema({
 
 });
 
+userSchema.virtual('products', {
+    ref: 'Product',
+    localField: '_id',
+    foreignField: 'user',
+    justOne: false,
+    options: {
+        sort: {productName: -1}
+    }
+})
+
 /*
   Password has middleware
  */
-userSchema.pre('save', async function(next){
+userSchema.pre('save', async function (next) {
     let salt = await bcrypt.genSalt(10);
     this.password = await bcrypt.hash(this.password, salt);
     next();
 })
 
 // IN: REQUEST PASSWORD: string =>> OUT: VALID: Boolean
-userSchema.methods.comparePass = async function(inputPass, userPass){
+userSchema.methods.comparePass = async function (inputPass, userPass) {
     return await bcrypt.compare(inputPass, userPass);
 }
 
 // Virtual
-userSchema.virtual('fullName').get(function(){
+userSchema.virtual('fullName').get(function () {
     return `${this.profile.firstName} ${this.profile.lastName}`;
 })
 
