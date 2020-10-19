@@ -20,7 +20,7 @@ const StorageSchema = new mongoose.Schema(
 );
 
 StorageSchema.virtual("products", {
-    ref: "Product",
+    ref: "product",
     localField: "_id",
     foreignField: "storage",
     justOne: false,

@@ -4,10 +4,10 @@
     <list default="true" id="8b6ba6c0-1cf0-4913-9565-3055b71000a1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mongoose/models/product.mongoose.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mongoose/models/product.mongoose.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mongoose/models/storage.moongose.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mongoose/models/storage.moongose.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mongoose/models/user.mongoose.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mongoose/models/user.mongoose.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/category.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/category.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/product.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/product.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/user.route.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +36,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\DA2\office-supplies-and-bookstore-app-backend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Node.js.server.js">
@@ -64,7 +65,9 @@
       <workItem from="1603015201540" duration="8410000" />
       <workItem from="1603030619421" duration="2625000" />
       <workItem from="1603075086626" duration="526000" />
-      <workItem from="1603078294395" duration="3164000" />
+      <workItem from="1603078294395" duration="3280000" />
+      <workItem from="1603112321872" duration="3347000" />
+      <workItem from="1603128534971" duration="3569000" />
     </task>
     <servers />
   </component>

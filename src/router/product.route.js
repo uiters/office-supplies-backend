@@ -1,7 +1,11 @@
 const {User} = require("../mongoose/models/user.mongoose.model");
-const {Category} = require("../mongoose/models/category.mongoose.model");
 const {Product} = require("../mongoose/models/product.mongoose.model");
+const {Category} = require("../mongoose/models/category.mongoose.model");
 const router = require("express").Router();
+
+/*
+ @GET: Get all products
+ */
 
 router.get("/", async (req, res) => {
     let products = await Product.find().sort({productName: 1});
@@ -9,7 +13,26 @@ router.get("/", async (req, res) => {
 })
 
 /*
-/ @ POST: Create Products
+ @GET: Get product by ID
+ */
+
+router.get("/:id", async (req, res) => {
+    let product = await Product.findById({_id: req.params.id})
+    if (!product) return res.status(404).send({
+        message: 'Product not found'
+    });
+    let user = await User.findById({_id: product.user}).select('email');
+    let type = await Category.findById({_id: product.type}).select('categoryName')
+
+    res.status(200).send({
+        message: 'success',
+        product
+    })
+
+})
+
+/*
+/ @ POST: Create Product
  */
 
 router.post('/', async (req, res) => {
@@ -52,7 +75,7 @@ router.post('/', async (req, res) => {
 
 router.put("/deleteproduct", async (req, res) => {
     let product = await Product.findByIdAndDelete({_id: req.body.id});
-    if(!product) return res.status(404).send({
+    if (!product) return res.status(404).send({
         message: 'product not found'
     })
 

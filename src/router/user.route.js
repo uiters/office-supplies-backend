@@ -5,13 +5,30 @@ const admin = require("../middleware/isAdmin.middleware");
 const bcrypt = require("bcrypt");
 const {User} = require("../mongoose/models/user.mongoose.model");
 
+/*
+ @GET: Get all user
+ */
+
 router.get("/", [auth, admin], async (req, res) => {
-    let user = await User.find();
+    let user = await User.find()
+    // let user = await User.find();
     res.status(200).send({
         user,
-        fullName: user[0].fullName
     });
 });
+
+/*
+ @GET: Get user with user's product
+ */
+
+router.get('/userproducts', auth, async (req, res) => {
+    let user = await User.findById({_id: req.user._id}).populate('userProducts', 'productName product')
+    res.status(200).send({
+        message: 'success',
+        user
+    })
+})
+
 
 /*
 @ POST: Create user
