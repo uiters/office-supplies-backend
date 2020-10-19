@@ -7,10 +7,10 @@ const productStatus = {
 }
 
 const ProductSchema = new mongoose.Schema({
-    type: String,
+    type: mongoose.Types.ObjectId,
     user: mongoose.Types.ObjectId,
     productName: String,
-    price: Number,
+    price: String,
     productDetails: Object,
     status: {
         type: Number,
@@ -28,3 +28,7 @@ const ProductSchema = new mongoose.Schema({
 
 
 const Product = mongoose.model('product', ProductSchema);
+
+module.exports = {
+    Product
+}

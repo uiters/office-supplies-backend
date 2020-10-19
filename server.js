@@ -5,7 +5,7 @@ const dotenv = require('dotenv')
 const authRoute = require("./src/router/auth.route");
 const userRoute = require("./src/router/user.route");
 const categoryRoute = require("./src/router/category.route");
-
+const productRoute = require("./src/router/product.route")
 
 dotenv.config();
 
@@ -32,6 +32,7 @@ mongoose
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 app.use("/api/category", categoryRoute);
+app.use("/api/product", productRoute);
 
 app.listen(process.env.PORT, () => {
     console.log("sever is running in port ", process.env.PORT);

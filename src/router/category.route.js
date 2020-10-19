@@ -117,7 +117,7 @@ router.put("/deletecategory", async (req, res) => {
 @ DELETE: Delete category
  */
 
-router.patch("/", async (req, res) => {
+router.put("/", async (req, res) => {
     let category = await Category.findOneAndDelete({
         categoryName: req.body.categoryName.toLowerCase(),
     });

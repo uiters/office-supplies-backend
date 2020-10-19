@@ -8,40 +8,39 @@ const userStatus = {
     'deactive': 1,
 }
 
-const userSchema = new Schema({
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    password: {
-        type: String,
-        required: true,
-    },
-    profile: {
-        firstName: String,
-        lastName: String,
-        phoneNumber: String,
-        address: {
-            city: String,
-            district: String,
-            street: String
-        }
-    },
-    isAdmin: {
-        type: Boolean,
-        required: true,
-    },
-    status: {
-        type: Number,
-        validate: {
-            validator: (status) => {
-                return Object.values(userStatus).includes(status)
+const userSchema = new Schema(
+    {
+        email: {
+            type: String,
+            required: true,
+            unique: true,
+        },
+        password: {
+            type: String,
+            required: true,
+        },
+        profile: {
+            firstName: String,
+            lastName: String,
+            phoneNumber: String,
+        },
+        isAdmin: {
+            type: Boolean,
+            required: true,
+        },
+        status: {
+            type: Number,
+            validate: {
+                validator: (status) => {
+                    return Object.values(userStatus).includes(status)
+                }
             }
         }
+    },
+    {
+        toJSON: {virtuals: true}
     }
-
-});
+);
 
 userSchema.virtual('products', {
     ref: 'Product',

@@ -13,7 +13,9 @@ const StorageSchema = new mongoose.Schema(
         },
     },
     {
-        toJSON: {virtuals: true}
+        toJSON: {
+            virtuals: true
+        }
     }
 );
 
