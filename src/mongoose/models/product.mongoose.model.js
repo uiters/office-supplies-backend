@@ -6,26 +6,61 @@ const productStatus = {
     'decline': 2,
 }
 
-const ProductSchema = new mongoose.Schema({
-    type: mongoose.Types.ObjectId,
-    user: mongoose.Types.ObjectId,
-    productName: String,
-    price: String,
-    productDetails: Object,
-    status: {
-        type: Number,
-        required: [true, 'status is required'],
-        validate: {
-            validator: (status) => {
-                return Object.values(productStatus).includes(status)
+const ProductSchema = new mongoose.Schema(
+    {
+        type: {
+            type: mongoose.Types.ObjectId,
+            required: true,
+        },
+        user: {
+            type: mongoose.Types.ObjectId,
+            required: true,
+        },
+        productName: {
+            type: String,
+            required: true,
+        },
+        price: {
+            type: String,
+            required: true,
+        },
+        productDetails: Object,
+        status: {
+            type: Number,
+            required: [true, 'status is required'],
+            validate: {
+                validator: (status) => {
+                    return Object.values(productStatus).includes(status)
+                }
             }
+        },
+        storage: mongoose.Types.ObjectId,
+        description: String,
+        productImageUrl: {
+            type: String,
+            required: true
         }
     },
-    storage: mongoose.Types.ObjectId,
-    description: String
+    {
+        toJSON: {virtuals: true},
+        timestamps: true
+    }
+)
+
+ProductSchema.virtual('getType', {
+    ref: 'category',
+    localField: 'type',
+    foreignField: '_id',
 })
 
-
+ProductSchema.virtual('getUser', {
+    ref: 'user',
+    localField: 'user',
+    foreignField: '_id',
+    options: {
+        sort: {email: -1}
+    }
+})
 
 const Product = mongoose.model('product', ProductSchema);
 

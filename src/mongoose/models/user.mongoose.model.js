@@ -38,7 +38,7 @@ const userSchema = new Schema(
             }
         }
     },
-    {toJSON: {virtuals: true}}
+    {toJSON: {virtuals: true}, timestamps: true}
 );
 
 userSchema.virtual('userProducts', {
@@ -66,13 +66,16 @@ userSchema.methods.comparePass = async function (inputPass, userPass) {
 }
 
 userSchema.methods.createToken = function () {
-    return jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, process.env.SECRET_KEY);
+    return jwt.sign({_id: this._id, isAdmin: this.isAdmin}, process.env.SECRET_KEY);
 };
+
+
 
 // Virtual
 // userSchema.virtual('fullName').get(function () {
 //     return `${this.profile.firstName} ${this.profile.lastName}`;
 // })
+
 
 const User = mongoose.model("user", userSchema);
 
