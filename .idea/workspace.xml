@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8b6ba6c0-1cf0-4913-9565-3055b71000a1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mongoose/models/storage.moongose.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mongoose/models/storage.moongose.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mongoose/models/user.mongoose.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mongoose/models/user.mongoose.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/product.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/product.route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/user.route.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,12 +82,24 @@
       <workItem from="1603075086626" duration="526000" />
       <workItem from="1603078294395" duration="3280000" />
       <workItem from="1603112321872" duration="3347000" />
-      <workItem from="1603128534971" duration="3569000" />
+      <workItem from="1603128534971" duration="3601000" />
+      <workItem from="1603158767849" duration="3586000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="253" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602933164604">

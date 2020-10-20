@@ -1,8 +1,11 @@
+
+
 const router = require("express").Router();
 
+const message = require('../constants/response.const')
+const responseService = require('../services/response.service')
 const auth = require("../middleware/auth.middleware");
 const admin = require("../middleware/isAdmin.middleware");
-const bcrypt = require("bcrypt");
 const {User} = require("../mongoose/models/user.mongoose.model");
 
 /*
@@ -12,10 +15,21 @@ const {User} = require("../mongoose/models/user.mongoose.model");
 router.get("/", [auth, admin], async (req, res) => {
     let user = await User.find()
     // let user = await User.find();
-    res.status(200).send({
-        user,
-    });
+    // res.status(200).send({
+    //     user,
+    // });
+    responseService(res,200, message.SUCCESS, user)
 });
+
+/*
+ @GET: Get current user
+ */
+
+router.get("/me", auth, async (req, res) => {
+    let userId = req.user;
+    let user = await User.findById({_id: userId._id}).populate('userProducts');
+    responseService(res,200, 'success', user);
+})
 
 /*
  @GET: Get user with user's product
@@ -23,10 +37,7 @@ router.get("/", [auth, admin], async (req, res) => {
 
 router.get('/userproducts', auth, async (req, res) => {
     let user = await User.findById({_id: req.user._id}).populate('userProducts', 'productName product')
-    res.status(200).send({
-        message: 'success',
-        user
-    })
+    responseService(res,200, 'success', user);
 })
 
 
@@ -35,7 +46,8 @@ router.get('/userproducts', auth, async (req, res) => {
  */
 router.post("/register", async (req, res) => {
     let user = await User.findOne({email: req.body.email});
-    if (user) return res.status(404).send("Email already register");
+    // if (user) return res.status(404).send("Email already register");
+    if (user) return responseService(res,406, message.EXISTED)
 
     user = new User({
         email: req.body.email,
@@ -48,7 +60,8 @@ router.post("/register", async (req, res) => {
 
     try {
         await user.save();
-        res.status(201).send(user);
+        // res.status(201).send(user);
+        responseService(res,201, message.CREATED, user)
     } catch (err) {
         console.log(err);
     }
@@ -62,9 +75,10 @@ router.put("/updateuser", auth, async (req, res) => {
 
     let user = await User.findOne({email: newUserInfo.email})
 
-    if (!user) return res.status(404).send({
-        message: 'User not found'
-    })
+    // if (!user) return res.status(404).send({
+    //     message: 'User not found'
+    // })
+    if (!user) return responseService(res,404, message.NOT_FOUND);
 
     user = await User.findByIdAndUpdate(
         {_id: user._id},
@@ -77,23 +91,25 @@ router.put("/updateuser", auth, async (req, res) => {
         {new: true}
     )
 
-    res.status(200).send({
-        message: 'user has been updated successfully',
-        user
-    })
+    // res.status(200).send({
+    //     message: 'user has been updated successfully',
+    //     user
+    // })
+    responseService(res,200, message.UPDATED, user)
 })
 
 /*
-@ POST: Delete user
+@ PUT: Delete user
 ** MUST BE LOGGED IN WITH ADMIN ACCOUNT TO DELETE USER **
  */
 
-router.post('/deleteuser', [auth, admin], async (req, res) => {
-    let user = await User.findOneAndDelete({email: req.body.email});
-    if (!user) return res.status(404).send({message: 'User not found'});
-    res.send({
-        message: `user with email ${user.email} has been deleted`
+router.put('/deleteuser', [auth, admin], async (req, res) => {
+    let user = await User.findOneAndDelete({email: req.body.email}).exec(err => {
+        if (err)
+            responseService(res, 500, err)
     });
+    if (!user) return responseService(404, message.NOT_FOUND)
+    responseService(res,200, message.DELETED, user)
 })
 
 
