@@ -1,10 +1,7 @@
 const router = require("express").Router();
-const message = require("../constants/response.const");
-const responseService = require("../services/response.service");
 const requestService = require("../services/request.service");
 const auth = require("../middleware/auth.middleware");
 const admin = require("../middleware/isAdmin.middleware");
-const { User } = require("../mongoose/models/user.mongoose.model");
 const {
   getUser,
   getCurrentUser,
