@@ -1,10 +1,11 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const { nextTick } = require("process");
 
 const productStatus = {
-    'accept': 1,
-    'waiting': 0,
-    'decline': 2,
-}
+    accept: 1,
+    waiting: 0,
+    decline: 2,
+};
 
 const ProductSchema = new mongoose.Schema(
     {
@@ -27,43 +28,62 @@ const ProductSchema = new mongoose.Schema(
         productDetails: Object,
         status: {
             type: Number,
-            required: [true, 'status is required'],
+            required: [true, "status is required"],
             validate: {
                 validator: (status) => {
-                    return Object.values(productStatus).includes(status)
-                }
-            }
+                    return Object.values(productStatus).includes(status);
+                },
+            },
         },
         storage: mongoose.Types.ObjectId,
         description: String,
         productImageUrl: {
             type: String,
-            required: true
-        }
+            required: true,
+        },
     },
     {
-        toJSON: {virtuals: true},
-        timestamps: true
+        toJSON: { virtuals: true },
+        timestamps: true,
     }
-)
+);
 
-ProductSchema.virtual('getType', {
-    ref: 'category',
-    localField: 'type',
-    foreignField: '_id',
-})
+ProductSchema.virtual("getType", {
+    ref: "category",
+    localField: "type",
+    foreignField: "_id",
+});
 
-ProductSchema.virtual('getUser', {
-    ref: 'user',
-    localField: 'user',
-    foreignField: '_id',
+ProductSchema.virtual("getUser", {
+    ref: "user",
+    localField: "user",
+    foreignField: "_id",
     options: {
-        sort: {email: -1}
-    }
-})
+        sort: { email: -1 },
+    },
+});
 
-const Product = mongoose.model('product', ProductSchema);
+ProductSchema.query.byProductName = function (productName) {
+    return this.where({ productName: new RegExp(productName, "i") });
+};
+
+ProductSchema.query.byProductTypeId = function (id) {
+    return this.where({ type: id });
+};
+
+ProductSchema.pre("find", function (next) {
+    this.populate({
+        path: "getType",
+        select: "categoryName -_id",
+    }).populate({
+        path: "getUser",
+        select: "email -_id",
+    });
+    next();
+});
+
+const Product = mongoose.model("product", ProductSchema);
 
 module.exports = {
-    Product
-}
+    Product,
+};
