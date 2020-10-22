@@ -27,12 +27,11 @@ userController.getUserById = async (req, res, next) => {
     responseService(res, 200, message.SUCCESS, user);
 };
 
-userController.createUser = async (req, res, next) => {
+userController.createUser = async (req, res) => {
     let user = new User({
         email: req.body.email,
         password: req.body.password,
         profile: req.body.profile,
-        phoneNumber: req.body.phoneNumber,
         isAdmin: req.body.isAdmin | false,
         status: req.body.status | 0,
     });

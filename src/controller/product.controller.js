@@ -1,8 +1,9 @@
 const responseService = require("../services/response.service");
 const message = require("../constants/response.const");
 const { User } = require("../mongoose/models/user.mongoose.model");
-const { Category } = require("../mongoose/models/category.mongoose.model");
+const { Type } = require("../mongoose/models/type.mongoose.model");
 const { Product } = require("../mongoose/models/product.mongoose.model");
+const { Category } = require("../mongoose/models/category.mongoose.model");
 
 const productController = {};
 
@@ -25,8 +26,8 @@ productController.getProductByName = async (req, res) => {
 };
 
 productController.getProductByType = async (req, res) => {
-    let typeId = await Category.findOne({categoryName: req.query.type});
-    if(!typeId) return responseService(res, 404, message.NOT_FOUND);
+    let typeId = await Type.findOne({ typeName: req.query.type });
+    if (!typeId) return responseService(res, 404, message.NOT_FOUND);
     let product = await Product.find().byProductTypeId(typeId._id);
     if (product.length === 0)
         return responseService(res, 404, message.NOT_FOUND);
@@ -34,22 +35,43 @@ productController.getProductByType = async (req, res) => {
 };
 
 productController.createProduct = async (req, res) => {
+    let categories = [];
+
     let product = req.body;
-    let category = await Category.findOne({ categoryName: product.type.toLowerCase() }).lean();;
-    let user = await User.findOne({ email: product.user }).lean();;
-    if (!user || !category) return responseService(res, 404, message.NOT_FOUND);
-    let newProduct = {
-        categoryId : category._id,
-        userId : user._id,
-        ...req.body
+
+    let type = await Type.findOne({
+        typeName: product.typeName.toLowerCase(),
+    }).lean();
+
+    let user = await User.findOne({ email: product.user }).lean();
+
+    for (let category of req.body.categoryName) {
+        category = await Category.findOne({ categoryName: category }).lean();
+        categories.push(category._id);
     }
-    product = Product.createProduct(newProduct)
+    if (!user || !type || categories.length === 0)
+        return responseService(res, 404, message.NOT_FOUND);
+
+    categories = Product.generateCategoryIdArray(categories);
+
+    let newProduct = {
+        typeId: type._id,
+        userId: user._id,
+        categoryId: categories,
+        ...req.body,
+    };
+
+    product = Product.createProduct(newProduct);
+
     await product.save();
+
     responseService(res, 200, message.CREATED, product);
 };
 
 productController.deleteProductById = async (req, res) => {
-    let product = await Product.findByIdAndDelete({ _id: req.params.id }).lean();
+    let product = await Product.findByIdAndDelete({
+        _id: req.params.id,
+    }).lean();
     if (!product) return responseService(res, 404, message.NOT_FOUND);
     responseService(res, 200, message.DELETED, product);
 };

@@ -1,23 +1,30 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
-
-const CategorySchema = new mongoose.Schema({
+const categorySchema = new mongoose.Schema({
     categoryName: {
         type: String,
-        required: true,
+        required: [true, 'category name is required'],
+        unique: true,
     },
-    subCategory: {
-        type: [String],
-        index: true
+    categoryType: {
+        type: mongoose.Types.ObjectId,
+        required: [true, 'category type is required']
     },
 })
 
-CategorySchema.pre('save', function (next) {
+categorySchema.pre('save', function(next){
     this.categoryName = this.categoryName.toLowerCase();
     next();
 })
 
-const Category = mongoose.model('category', CategorySchema)
+categorySchema.statics.createCategory = function (category) {
+    return new Category({
+        categoryName: category.categoryName,
+        categoryType: category.categoryType,
+    })
+}
+
+const Category = mongoose.model('category', categorySchema);
 
 module.exports = {
     Category
