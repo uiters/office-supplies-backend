@@ -46,6 +46,10 @@ const ProductSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
+        quantity: {
+            type: Number,
+            required: true,
+        }
     },
     {
         toJSON: { virtuals: true },
@@ -102,6 +106,7 @@ ProductSchema.statics.createProduct = function (newProduct) {
         productImageUrl: newProduct.productImageUrl
             ? newProduct.productImageUrl
             : "https://cdn.dumpaday.com/wp-content/uploads/2018/09/photos-21-3.jpg",
+        quantity: newProduct.productQuantity | 1
     }));
 };
 

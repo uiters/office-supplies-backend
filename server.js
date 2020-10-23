@@ -7,7 +7,9 @@ const authRoute = require("./src/router/auth.route");
 const userRoute = require("./src/router/user.route");
 const typeRoute = require("./src/router/type.route")
 const productRoute = require("./src/router/product.route");
-const categoryRoute = require("./src/router/category.route")
+const categoryRoute = require("./src/router/category.route");
+const addressRoute = require("./src/router/address.route");
+const invoiceRoute = require("./src/router/invoice.route");
 
 dotenv.config();
 
@@ -39,6 +41,8 @@ app.use("/api/user", userRoute);
 app.use("/api/type", typeRoute);
 app.use("/api/product", productRoute);
 app.use("/api/category", categoryRoute);
+app.use("/api/address", addressRoute);
+app.use("/api/invoice", invoiceRoute)
 
 app.listen(process.env.PORT, () => {
   console.log("sever is running in port ", process.env.PORT);

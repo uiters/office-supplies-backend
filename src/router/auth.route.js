@@ -11,7 +11,7 @@ router.post('/login', async (req, res) => {
 
     const token = user.createToken();
 
-    res.send(token);
+    res.send(`bearer ${token}`);
 })
 
 module.exports = router
