@@ -1,0 +1,16 @@
+[
+    {
+        "components": {
+            "schemas": {
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+]

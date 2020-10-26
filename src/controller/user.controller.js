@@ -5,9 +5,11 @@ const message = require("../constants/response.const");
 const userController = {};
 
 userController.getUser = async (req, res, next) => {
+
     let user = await User.find().populate("userProducts", "productName product");
 
     responseService(res, 200, message.SUCCESS, user);
+    
 };
 
 userController.getCurrentUser = async (req, res, next) => {
@@ -40,29 +42,34 @@ userController.createUser = async (req, res) => {
 
 userController.updateUser = async (req, res, next) => {
     let user = await User.findById({ _id: req.user._id });
+    if (!user) return responseService(res, 404, message.NOT_FOUND);
 
+    if(!req.body.password) return responseService(res, 500, message.DB_ERR);
+        
+    let hashPassword = await user.hashPassword(req.body.password);
     user = await User.findByIdAndUpdate(
         { _id: req.user._id },
         {
             email: req.body.email ? req.body.email : user.email,
-            password: req.body.password ? req.body.password : user.password,
+            password: req.body.password ? hashPassword : user.password,
             profile: req.body.profile ? req.body.profile : user.profile,
             status: req.body.status ? req.body.status : user.status,
         },
         { new: true }
     );
 
-    if (!user) return responseService(res, 404, message.NOT_FOUND);
 
     responseService(res, 200, message.UPDATED, user);
 };
 
 userController.deleteUser = async (req, res) => {
+
     let user = await User.findOneAndDelete({ _id: req.params.id }).lean();
 
     if (!user) return responseService(res, 404, message.NOT_FOUND);
 
     responseService(res, 200, message.DELETED, user);
+
 };
 
 module.exports = userController;

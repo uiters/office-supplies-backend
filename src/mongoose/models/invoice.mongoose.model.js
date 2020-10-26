@@ -19,7 +19,7 @@ const InvoiceSchema = new mongoose.Schema(
 );
 
 InvoiceSchema.virtual("getInvoiceDetail", {
-    ref: "invoicedetail",
+    ref: "invoice-detail",
     localField: "_id",
     foreignField: "invoiceId",
 });
