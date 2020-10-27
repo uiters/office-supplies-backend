@@ -42,7 +42,7 @@ const options = {
         schemes: ["http", "https"],
     },
     // path to the API DOCS
-    apis: ["./src/router/user.route.js"],
+    apis: ["./src/router/*.route.js"],
 };
 
 const swaggerSpec = swaggerJSDoc(options);
@@ -61,25 +61,6 @@ mongoose
 
 const app = express();
 app.use(express.json());
-
-// const swaggerJsDoc = require('swagger-jsdoc');
-// const swaggerUi = require('swagger-ui-express');
-// const swaggerOptions = {
-//     swaggerDefinition : {
-//         info: {
-//             title: 'Office-supplies API',
-//             description: 'Office-supplies API Information',
-//             contact: {
-//                 name: "Amazing Dev"
-//             },
-//             servers: [`http://localhost:${process.env.PORT}`],
-//         }
-//     },
-//     apis: ['./router/user.route.js']
-// };
-
-// const swaggerDocs = swaggerJsDoc(swaggerOptions);
-// app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
