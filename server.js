@@ -12,6 +12,7 @@ const productRoute = require("./src/router/product.route");
 const categoryRoute = require("./src/router/category.route");
 const addressRoute = require("./src/router/address.route");
 const invoiceRoute = require("./src/router/invoice.route");
+const invoiceDetailRoute = require("./src/router/invoiceDetail.route");
 // const a = require('./src/router')
 /* 
     Swagger
@@ -36,8 +37,8 @@ const options = {
                 },
             },
         },
-        security:{
-            ApiKeyAuth: []
+        security: {
+            ApiKeyAuth: [],
         },
         schemes: ["http", "https"],
     },
@@ -62,25 +63,6 @@ mongoose
 const app = express();
 app.use(express.json());
 
-// const swaggerJsDoc = require('swagger-jsdoc');
-// const swaggerUi = require('swagger-ui-express');
-// const swaggerOptions = {
-//     swaggerDefinition : {
-//         info: {
-//             title: 'Office-supplies API',
-//             description: 'Office-supplies API Information',
-//             contact: {
-//                 name: "Amazing Dev"
-//             },
-//             servers: [`http://localhost:${process.env.PORT}`],
-//         }
-//     },
-//     apis: ['./router/user.route.js']
-// };
-
-// const swaggerDocs = swaggerJsDoc(swaggerOptions);
-// app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/type", typeRoute);
@@ -88,6 +70,7 @@ app.use("/api/product", productRoute);
 app.use("/api/category", categoryRoute);
 app.use("/api/address", addressRoute);
 app.use("/api/invoice", invoiceRoute);
+app.use("/api/invoice_detail", invoiceDetailRoute);
 
 app.use("/api-documentation", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 

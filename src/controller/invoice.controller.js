@@ -21,11 +21,18 @@ invoiceController.getInvoiceBy = async (req, res) => {
 };
 
 invoiceController.createInvoice = async (req, res) => {
-    let invoice = Invoice.createInvoice(req.body);
+
+    const invoiceData = {
+        userId: req.user._id,
+        ...req.body,
+    };
+
+    let invoice = Invoice.createInvoice(invoiceData);
 
     await invoice.save();
 
     responseService(res, 201, message.CREATED, invoice);
+    
 };
 
 module.exports = invoiceController;

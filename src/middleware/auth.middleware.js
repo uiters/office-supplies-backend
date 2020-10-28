@@ -8,7 +8,7 @@ function auth(req, res, next) {
 
     if (token[0] !== "bearer") return res.status(401).send("Access denided. Invalid!");
     try {
-        const decode = jwt.verify(token[1], "JWT_SECRET");
+        const decode = jwt.verify(token[1], process.env.SECRET_KEY);
         req.user = decode;
         next();
     } catch (ex) {
