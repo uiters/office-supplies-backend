@@ -20,8 +20,7 @@ productController.getProductById = async (req, res) => {
 
 productController.getProductByName = async (req, res) => {
     let product = await Product.find().lean().byProductName(req.query.name);
-    if (product.length === 0)
-        return responseService(res, 404, message.NOT_FOUND);
+    if (product.length === 0) return responseService(res, 404, message.NOT_FOUND);
     responseService(res, 200, message.SUCCESS, product);
 };
 
@@ -29,8 +28,7 @@ productController.getProductByType = async (req, res) => {
     let typeId = await Type.findOne({ typeName: req.query.type });
     if (!typeId) return responseService(res, 404, message.NOT_FOUND);
     let product = await Product.find().byProductTypeId(typeId._id);
-    if (product.length === 0)
-        return responseService(res, 404, message.NOT_FOUND);
+    if (product.length === 0) return responseService(res, 404, message.NOT_FOUND);
     responseService(res, 200, message.SUCCESS, product);
 };
 

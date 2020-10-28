@@ -1,10 +1,11 @@
 const productController = require("../controller/product.controller");
+const auth = require("../middleware/auth.middleware");
 const router = require("express").Router();
 const requestService = require("../services/request.service");
 
 /**
  * @swagger
- * 
+ *
  * path:
  *  /api/product:
  *      get:
@@ -22,8 +23,8 @@ const requestService = require("../services/request.service");
  *                  description: "not found!"
  *              "500":
  *                  description: "DB_Error!"
- * 
- * /api/product/productid/{productId}:
+ *
+ *  /api/product/productid/{productId}:
  *      get:
  *          tags:
  *              - "products"
@@ -51,15 +52,12 @@ router.get("/productid/:id", requestService(productController.getProductById));
 router.get("/", requestService(productController.getAllProducts));
 
 // localhost:3000/api/product/productname?name='keyword'
-router.get(
-    "/productname",
-    requestService(productController.getProductByName)
-);
+router.get("/productname", requestService(productController.getProductByName));
 
 // localhost:3000/api/product/producttype?type='keyword'
-router.get("/producttype", requestService(productController.getProductByType))
+router.get("/producttype", requestService(productController.getProductByType));
 
-router.post("/", requestService(productController.createProduct));
-router.delete("/:id", requestService(productController.deleteProductById));
+router.post("/", auth, requestService(productController.createProduct));
+router.delete("/:id", auth, requestService(productController.deleteProductById));
 
 module.exports = router;
