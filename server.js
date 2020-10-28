@@ -43,7 +43,7 @@ const options = {
         schemes: ["http", "https"],
     },
     // path to the API DOCS
-    apis: ["./src/router/user.route.js"],
+    apis: ["./src/router/*.route.js"],
 };
 
 const swaggerSpec = swaggerJSDoc(options);
