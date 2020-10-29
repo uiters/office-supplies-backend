@@ -19,6 +19,7 @@ const InvoiceDetailSchema = new mongoose.Schema({
     },
 });
 
+
 const InvoiceDetail = mongoose.model("invoice-detail", InvoiceDetailSchema);
 
 module.exports = InvoiceDetail;
