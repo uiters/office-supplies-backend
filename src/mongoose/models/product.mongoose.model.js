@@ -49,7 +49,7 @@ const ProductSchema = new mongoose.Schema(
         quantity: {
             type: Number,
             required: true,
-        }
+        },
     },
     {
         toJSON: { virtuals: true },
@@ -78,8 +78,15 @@ ProductSchema.virtual("getCategory", {
     foreignField: "_id",
 });
 
-ProductSchema.query.byProductName = function (productName) {
-    return this.where({ productName: new RegExp(productName, "i") });
+ProductSchema.query.findSpecificProduct = function (keyword) {
+    // return this.where({ productName: new RegExp(productName, "i") });
+    return this.where({
+        $or: [
+            { productName: new RegExp(productName, "i") },
+            { productType: keyword },
+            { _id: keyword },
+        ],
+    });
 };
 
 ProductSchema.query.byProductTypeId = function (id) {
@@ -106,7 +113,7 @@ ProductSchema.statics.createProduct = function (newProduct) {
         productImageUrl: newProduct.productImageUrl
             ? newProduct.productImageUrl
             : "https://cdn.dumpaday.com/wp-content/uploads/2018/09/photos-21-3.jpg",
-        quantity: newProduct.productQuantity | 1
+        quantity: newProduct.productQuantity | 1,
     }));
 };
 

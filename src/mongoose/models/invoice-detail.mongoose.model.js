@@ -11,7 +11,7 @@ const InvoiceDetailSchema = new mongoose.Schema({
     },
     quantity: {
         type: Number,
-        required: [true, "Quantity is required"],
+        required: [true, "Quantity is required"]
     },
     total: {
         type: Number,
