@@ -1,5 +1,6 @@
 const productController = require("../controller/product.controller");
 const auth = require("../middleware/auth.middleware");
+const isAdmin = require("../middleware/isAdmin.middleware");
 const router = require("express").Router();
 const requestService = require("../services/request.service");
 
@@ -55,6 +56,14 @@ router.get("/find", requestService(productController.getProductByKeyword));
 // localhost:3000/api/product/producttype?type='keyword'
 router.post("/", auth, requestService(productController.createProduct));
 router.post("/create_many", auth, requestService(productController.insertMany));
+
+router.put("/update_product/:id", auth, requestService(productController.updateProduct));
+router.put(
+    "/update_product_status/:id",
+    [auth, isAdmin],
+    requestService(productController.updateProductStatus)
+);
+
 router.delete("/:id", auth, requestService(productController.deleteProductById));
 
 module.exports = router;

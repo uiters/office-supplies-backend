@@ -98,4 +98,33 @@ productController.deleteProductById = async (req, res) => {
     responseService(res, 200, message.DELETED, product);
 };
 
+productController.updateProduct = async (req, res) => {
+    let type = await Type.findOne({ typeName: req.body.productType });
+    let product = await Product.updateOne(
+        { _id: req.params.id },
+        {
+            $set: {
+                productName: req.body.productName,
+                productType: type._id,
+                price: req.body.price,
+                productDetails: req.body.productDetails,
+                description: req.body.description,
+                productImgaeUrl: req.body.productImageUrl,
+                quantity: req.body.quantity,
+            },
+        }
+    );
+
+    responseService(res, 200, message.SUCCESS, product);
+};
+
+productController.updateProductStatus = async (req, res) => {
+    let status = req.body.status;
+    let product = await Product.findOne({ _id: req.params.id });
+    product.status = status;
+
+    await product.save();
+    responseService(res, 200, message.UPDATED, product);
+};
+
 module.exports = productController;
