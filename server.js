@@ -1,7 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+
+/**
+ * Middleware
+ */
 const errorHandler = require("./src/middleware/errorHandler.middleware");
+const cors = require('cors');
+const helmet = require('helmet');
+const morgan = require('morgan');
+/** */
+
 const swaggerUi = require("swagger-ui-express");
 const swaggerJSDoc = require("swagger-jsdoc");
 
@@ -62,6 +71,9 @@ mongoose
 
 const app = express();
 app.use(express.json());
+app.use(cors());
+app.use(helmet());
+app.use(morgan('tiny'));
 
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
