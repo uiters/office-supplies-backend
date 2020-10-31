@@ -1,0 +1,384 @@
+[
+    {
+        "productName": "How to Make Friends With Strangers and Stay Friends Until You Die",
+        "price": "US$16.97",
+        "productDetails": {
+            "author": "Chris (Simpsons Artist)",
+            "published": "15 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4091/9781409197119.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Harry Potter and the Philosopher's Stone",
+        "price": "US$11.03",
+        "productDetails": {
+            "author": "J.K. Rowling",
+            "published": "16 Oct 2014",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4088/9781408855652.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Tabby McTat",
+        "price": "US$11.57",
+        "productDetails": {
+            "author": "Julia Donaldson",
+            "published": "13 Dec 2016",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4071/9781407170701.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Rich Dad Poor Dad",
+        "price": "US$12.39",
+        "productDetails": {
+            "author": "Robert T. Kiyosaki",
+            "published": "28 Apr 2017",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/6126/9781612680194.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Word Perfect",
+        "price": "US$20.27",
+        "productDetails": {
+            "author": "Susie Dent",
+            "published": "15 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5293/9781529311518.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "I Want My Hat Back",
+        "price": "US$8.98",
+        "productDetails": {
+            "author": "Jon Klassen",
+            "published": "04 Oct 2012",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4063/9781406338539.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Smartest Giant in Town",
+        "price": "US$8.88",
+        "productDetails": {
+            "author": "Julia Donaldson",
+            "published": "12 Sep 2016",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5098/9781509812530.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Four Agreements",
+        "price": "US$11.95",
+        "productDetails": {
+            "author": "Don Miguel Ruiz",
+            "published": "10 Dec 1997",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/8784/9781878424310.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Gangsta Granny",
+        "price": "US$10.37",
+        "productDetails": {
+            "author": "David Walliams",
+            "published": "28 Feb 2013",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0073/9780007371464.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Milkman",
+        "price": "US$12.48",
+        "productDetails": {
+            "author": "Anna Burns",
+            "published": "01 Nov 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/5713/9780571338757.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Intelligent Investor",
+        "price": "US$27.14",
+        "productDetails": {
+            "author": "Benjamin Graham",
+            "published": "23 Oct 2003",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0605/9780060555665.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "How to Win Friends and Influence People",
+        "price": "US$9.64",
+        "productDetails": {
+            "author": "Dale Carnegie",
+            "published": "16 May 2011",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4391/9781439199190.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Mindset - Updated Edition",
+        "price": "US$11.92",
+        "productDetails": {
+            "author": "Dr Carol Dweck",
+            "published": "11 Apr 2017",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4721/9781472139955.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Giver of Stars",
+        "price": "US$12.93",
+        "productDetails": {
+            "author": "Jojo Moyes",
+            "published": "16 Jun 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/7181/9780718183219.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Entangled Life",
+        "price": "US$26.07",
+        "productDetails": {
+            "author": "Merlin Sheldrake",
+            "published": "03 Sep 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/8479/9781847925206.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Wim Hof Method",
+        "price": "US$22.94",
+        "productDetails": { "author": "Wim Hof", "published": "24 Sep 2020", "format": "Hardback" },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/8460/9781846046292.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Home Stretch",
+        "price": "US$24.33",
+        "productDetails": {
+            "author": "Graham Norton",
+            "published": "01 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4736/9781473665187.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Psychology of Money",
+        "price": "US$17.97",
+        "productDetails": {
+            "author": "Morgan Housel",
+            "published": "08 Sep 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/8571/9780857197689.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Kay's Anatomy",
+        "price": "US$24.16",
+        "productDetails": {
+            "author": "Adam Kay",
+            "published": "15 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/2414/9780241452912.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Look Inside Space",
+        "price": "US$20.11",
+        "productDetails": {
+            "author": "Rob Lloyd Jones",
+            "published": "29 Nov 2012",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4095/9781409523383.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Chill Skill",
+        "price": "US$26.31",
+        "productDetails": {
+            "author": "Niall Breslin",
+            "published": "16 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/7171/9780717190195.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "LEGO (R) Minifigure A Visual History New Edition",
+        "price": "US$52.08",
+        "productDetails": {
+            "author": "Gregory Farshtey",
+            "published": "01 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/2414/9780241409695.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "One Of Us Is Lying",
+        "price": "US$11.49",
+        "productDetails": {
+            "author": "Karen McManus",
+            "published": "22 Apr 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1413/9780141375632.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Shadow King",
+        "price": "US$12.81",
+        "productDetails": {
+            "author": "Maaza Mengiste",
+            "published": "01 Oct 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/8388/9781838851170.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Look Inside Things That Go",
+        "price": "US$21.70",
+        "productDetails": {
+            "author": "Rob Lloyd Jones",
+            "published": "01 Nov 2013",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4095/9781409550259.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Ottolenghi SIMPLE",
+        "price": "US$43.66",
+        "productDetails": {
+            "author": "Yotam Ottolenghi",
+            "published": "06 Sep 2018",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7850/9781785031168.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Un-cook Yourself",
+        "price": "US$32.46",
+        "productDetails": {
+            "author": "Nat's What I Reckon",
+            "published": "01 Dec 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7610/9781761040900.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Harry Potter and the Chamber of Secrets",
+        "price": "US$11.37",
+        "productDetails": {
+            "author": "J.K. Rowling",
+            "published": "16 Oct 2014",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4088/9781408855669.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Light Seer's Tarot",
+        "price": "US$21.81",
+        "productDetails": { "author": "Chris-Anne", "published": "03 Dec 2019", "format": "Cards" },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4019/9781401958039.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Handmaid's Tale",
+        "price": "US$10.28",
+        "productDetails": {
+            "author": "Margaret Atwood",
+            "published": "28 May 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7848/9781784874872.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    }
+]

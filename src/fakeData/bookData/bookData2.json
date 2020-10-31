@@ -1,0 +1,392 @@
+[
+    {
+        "productName": "The Wonderful Things You Will Be",
+        "price": "US$23.30",
+        "productDetails": {
+            "author": "Emily Winfield Martin",
+            "published": "22 Sep 2015",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/3853/9780385376716.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Choice",
+        "price": "US$13.40",
+        "productDetails": {
+            "author": "Edith Eger",
+            "published": "01 Feb 2019",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/8460/9781846045127.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Educated",
+        "price": "US$13.61",
+        "productDetails": {
+            "author": "Tara Westover",
+            "published": "27 Nov 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0995/9780099511021.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Have You Filled A Bucket Today?",
+        "price": "US$11.06",
+        "productDetails": {
+            "author": "Carol McCloud",
+            "published": "01 Oct 2015",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/9960/9780996099936.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "How Things Work",
+        "price": "US$17.56",
+        "productDetails": {
+            "author": "Conrad Mason",
+            "published": "02 Oct 2009",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/7460/9780746098516.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Ottolenghi FLAVOUR",
+        "price": "US$45.30",
+        "productDetails": {
+            "author": "Yotam Ottolenghi",
+            "published": "10 Sep 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7850/9781785038938.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Room on the Broom",
+        "price": "US$11.02",
+        "productDetails": {
+            "author": "Julia Donaldson",
+            "published": "25 Aug 2003",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1425/9780142501122.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "A Life on Our Planet",
+        "price": "US$27.55",
+        "productDetails": {
+            "author": "David Attenborough",
+            "published": "01 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5291/9781529108279.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Roald Dahl's Marvellous Joke Book",
+        "price": "US$7.71",
+        "productDetails": {
+            "author": "Roald Dahl",
+            "published": "06 Sep 2012",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1413/9780141340555.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Thursday Murder Club",
+        "price": "US$25.16",
+        "productDetails": {
+            "author": "Richard Osman",
+            "published": "03 Sep 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/2414/9780241425442.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Start With Why",
+        "price": "US$12.45",
+        "productDetails": {
+            "author": "Simon Sinek",
+            "published": "03 Apr 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/2419/9780241958223.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Fifty-Fifty",
+        "price": "US$12.81",
+        "productDetails": {
+            "author": "Steve Cavanagh",
+            "published": "03 Sep 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4091/9781409185864.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Case of the Left-Handed Lady",
+        "price": "US$11.16",
+        "productDetails": {
+            "author": "Nancy Springer",
+            "published": "15 May 2008",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1424/9780142411902.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Rhythm of War",
+        "price": "US$31.32",
+        "productDetails": {
+            "author": "Brandon Sanderson",
+            "published": "17 Nov 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/7653/9780765326386.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Man Who Mistook His Wife for a Hat",
+        "price": "US$7.75",
+        "productDetails": {
+            "author": "Oliver Sacks",
+            "published": "02 Sep 2011",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/3305/9780330523622.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Tiger Who Came to Tea",
+        "price": "US$10.15",
+        "productDetails": {
+            "author": "Judith Kerr",
+            "published": "06 Feb 2006",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0072/9780007215997.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Stick Man Early Reader",
+        "price": "US$6.84",
+        "productDetails": {
+            "author": "Julia Donaldson",
+            "published": "06 Dec 2012",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4071/9781407132327.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Brain Games For Clever Kids",
+        "price": "US$6.13",
+        "productDetails": {
+            "author": "Gareth Moore",
+            "published": "01 Oct 2014",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7805/9781780552491.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Very Hungry Caterpillar: Little Learning Library",
+        "price": "US$12.28",
+        "productDetails": {
+            "author": "Eric Carle",
+            "published": "10 Jan 2011",
+            "format": "Board book"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1413/9780141385112.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The 130-Storey Treehouse",
+        "price": "US$17.42",
+        "productDetails": {
+            "author": "Andy Griffiths",
+            "published": "20 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5290/9781529045949.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Snail and the Whale",
+        "price": "US$11.42",
+        "productDetails": {
+            "author": "Julia Donaldson",
+            "published": "04 Jun 2006",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1424/9780142405802.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Invisible Life of Addie LaRue",
+        "price": "US$27.11",
+        "productDetails": {
+            "author": "V.E. Schwab",
+            "published": "06 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7856/9781785652509.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Secret",
+        "price": "US$23.71",
+        "productDetails": {
+            "author": "Rhonda Byrne",
+            "published": "04 Dec 2006",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/8473/9781847370297.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Harry Potter Box Set: The Complete Collection (Children's Paperback)",
+        "price": "US$108.04",
+        "productDetails": {
+            "author": "J.K. Rowling",
+            "published": "15 Nov 2014",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4088/9781408856772.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "A Gentleman in Moscow",
+        "price": "US$13.33",
+        "productDetails": {
+            "author": "Amor Towles",
+            "published": "10 Jan 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0995/9780099558781.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Sentinel",
+        "price": "US$23.04",
+        "productDetails": {
+            "author": "Lee Child",
+            "published": "27 Oct 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7876/9781787633629.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Midnight Library",
+        "price": "US$22.78",
+        "productDetails": {
+            "author": "Matt Haig",
+            "published": "13 Aug 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7868/9781786892706.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Thinking, Fast and Slow",
+        "price": "US$18.91",
+        "productDetails": {
+            "author": "Daniel Kahneman",
+            "published": "14 May 2012",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1410/9780141033570.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Where's Spot?",
+        "price": "US$10.36",
+        "productDetails": {
+            "author": "Eric Hill",
+            "published": "16 Jun 2011",
+            "format": "Board book"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/7232/9780723263661.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Diary of a Wimpy Kid 15",
+        "price": "US$19.48",
+        "productDetails": {
+            "author": "Jeff Kinney",
+            "published": "27 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4197/9781419748684.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    }
+]

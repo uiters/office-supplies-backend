@@ -23,7 +23,7 @@ const ProductSchema = new mongoose.Schema(
         productCategory: [
             {
                 type: mongoose.Types.ObjectId,
-                required: [true, "category is required"],
+                // required: [true, "category is required"],
             },
         ],
         price: {
@@ -40,7 +40,6 @@ const ProductSchema = new mongoose.Schema(
                 },
             },
         },
-        storage: mongoose.Types.ObjectId,
         description: String,
         productImageUrl: {
             type: String,
@@ -105,10 +104,10 @@ ProductSchema.statics.createProduct = function (newProduct) {
     return (product = new Product({
         productType: newProduct.typeId, //Object ID
         user: newProduct.userId, //Object ID
-        productCategory: [...newProduct.categoryId], //Array of Object ID
+        // productCategory: [...newProduct.categoryId], //Array of Object ID
         productName: newProduct.productName,
         price: newProduct.price,
-        status: newProduct.status | 0,
+        status: newProduct.status ? newProduct.status : 0,
         description: newProduct.description,
         productImageUrl: newProduct.productImageUrl
             ? newProduct.productImageUrl
@@ -117,13 +116,13 @@ ProductSchema.statics.createProduct = function (newProduct) {
     }));
 };
 
-ProductSchema.pre("find", function (next) {
-    this.populate({
-        path: "getCategory",
-        select: "categoryName -_id",
-    });
-    next();
-});
+// ProductSchema.pre("find", function (next) {
+//     this.populate({
+//         path: "getCategory",
+//         select: "categoryName -_id",
+//     });
+//     next();
+// });
 
 const Product = mongoose.model("product", ProductSchema);
 

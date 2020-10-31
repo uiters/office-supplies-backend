@@ -54,8 +54,8 @@ router.get("/find", requestService(productController.getProductByKeyword));
 
 // localhost:3000/api/product/producttype?type='keyword'
 router.post("/", auth, requestService(productController.createProduct));
+router.post("/create_many", auth, requestService(productController.insertMany));
 router.delete("/:id", auth, requestService(productController.deleteProductById));
-
 
 module.exports = router;
 // router.get("/productid/:id", requestService(productController.getProductById));

@@ -1,0 +1,388 @@
+[
+    {
+        "productName": "Percy Jackson and the Olympians",
+        "price": "US$55.69",
+        "productDetails": {
+            "author": "Rick Riordan",
+            "published": "03 Jun 2014",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4847/9781484707234.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Art of War",
+        "price": "US$4.39",
+        "productDetails": {
+            "author": "Sun Tzu",
+            "published": "14 Oct 2011",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0074/9780007420124.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Dr. Seuss's ABC",
+        "price": "US$6.22",
+        "productDetails": {
+            "author": "Dr. Seuss",
+            "published": "26 Nov 1996",
+            "format": "Board book"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/6798/9780679882817.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Animal Farm",
+        "price": "US$9.62",
+        "productDetails": {
+            "author": "George Orwell",
+            "published": "01 Oct 2008",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1410/9780141036137.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Call Me By Your Name",
+        "price": "US$8.35",
+        "productDetails": {
+            "author": "Andre Aciman",
+            "published": "03 Apr 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7864/9781786495259.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Ten Little Fingers and Ten Little Toes",
+        "price": "US$13.01",
+        "productDetails": {
+            "author": "Mem Fox",
+            "published": "07 Feb 2011",
+            "format": "Board book"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4063/9781406331264.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "We Were Liars",
+        "price": "US$8.80",
+        "productDetails": {
+            "author": "E. Lockhart",
+            "published": "13 May 2014",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4714/9781471403989.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Lost Connections",
+        "price": "US$11.86",
+        "productDetails": {
+            "author": "Johann Hari",
+            "published": "11 Jan 2019",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4088/9781408878729.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Brave New World",
+        "price": "US$10.86",
+        "productDetails": {
+            "author": "Aldous Huxley",
+            "published": "08 Mar 2019",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0994/9780099477464.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Troubled Blood",
+        "price": "US$34.96",
+        "productDetails": {
+            "author": "Robert Galbraith",
+            "published": "29 Sep 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/7515/9780751579932.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Case of the Gypsy Goodbye",
+        "price": "US$9.31",
+        "productDetails": {
+            "author": "Nancy Springer",
+            "published": "10 Nov 2011",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1424/9780142418888.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Subtle Art of Not Giving a F*ck",
+        "price": "US$25.66",
+        "productDetails": {
+            "author": "Mark Manson",
+            "published": "15 May 2018",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0624/9780062457714.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Oh, The Places You'll Go!",
+        "price": "US$10.69",
+        "productDetails": {
+            "author": "Dr. Seuss",
+            "published": "01 Jun 2017",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0074/9780007413577.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Can't Hurt Me",
+        "price": "US$26.59",
+        "productDetails": {
+            "author": "David Goggins",
+            "published": "11 Oct 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5445/9781544512273.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Invisible String",
+        "price": "US$10.87",
+        "productDetails": {
+            "author": "Patrice Karst",
+            "published": "30 Oct 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/3164/9780316486231.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Why We Sleep",
+        "price": "US$14.45",
+        "productDetails": {
+            "author": "Matthew Walker",
+            "published": "27 Jul 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1419/9780141983769.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Six of Crows: Collector's Edition",
+        "price": "US$24.05",
+        "productDetails": {
+            "author": "Leigh Bardugo",
+            "published": "11 Oct 2018",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5101/9781510106284.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Stick Man",
+        "price": "US$9.14",
+        "productDetails": {
+            "author": "Julia Donaldson",
+            "published": "07 Jul 2016",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4071/9781407170718.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Salt Path",
+        "price": "US$12.70",
+        "productDetails": {
+            "author": "Raynor Winn",
+            "published": "31 Jan 2019",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4059/9781405937184.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Whole-Brain Child",
+        "price": "US$15.36",
+        "productDetails": {
+            "author": "Daniel J Siegel",
+            "published": "29 Nov 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/5533/9780553386691.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Subtle Art of Not Giving a F*Ck",
+        "price": "US$17.26",
+        "productDetails": {
+            "author": "Mark Manson",
+            "published": "19 Jan 2017",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0626/9780062641540.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "My Hero Academia, Vol. 25",
+        "price": "US$10.72",
+        "productDetails": {
+            "author": "Kohei Horikoshi",
+            "published": "29 Oct 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/9747/9781974717620.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Beano Annual 2021",
+        "price": "US$18.47",
+        "productDetails": { "author": "", "published": "08 Jul 2020", "format": "Hardback" },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/8453/9781845358143.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Beekeeper of Aleppo",
+        "price": "US$13.66",
+        "productDetails": {
+            "author": "Christy Lefteri",
+            "published": "20 Feb 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/8387/9781838770013.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Case of the Cryptic Crinoline",
+        "price": "US$8.59",
+        "productDetails": {
+            "author": "Nancy Springer",
+            "published": "10 Nov 2011",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1424/9780142416907.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Once there was a boy...",
+        "price": "US$28.56",
+        "productDetails": {
+            "author": "Oliver Jeffers",
+            "published": "25 Sep 2014",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0075/9780007584611.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Baby Snatchers",
+        "price": "US$9.83",
+        "productDetails": {
+            "author": "Mary Creighton",
+            "published": "01 Apr 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/9116/9781911600282.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Champagne Football",
+        "price": "US$22.35",
+        "productDetails": {
+            "author": "Mark Tighe",
+            "published": "17 Sep 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/8448/9781844884933.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Dare to Lead",
+        "price": "US$16.91",
+        "productDetails": {
+            "author": "Brene Brown",
+            "published": "17 Dec 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7850/9781785042140.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Creative food photography",
+        "price": "US$29.05",
+        "productDetails": {
+            "author": "Kimberly Espinel",
+            "published": "01 Jan 2021",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5272/9781527258358.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    }
+]

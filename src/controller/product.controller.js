@@ -13,7 +13,7 @@ const productController = {};
 productController.getAllProducts = async (req, res) => {
     let page = parseInt(req.query.page);
     // let products = await Product.find().lean();
-    let pageCount = Math.ceil((await Product.count()) / PAGE_SIZE);
+    let pageCount = Math.ceil((await Product.countDocuments()) / PAGE_SIZE);
     let products = await paginateService(Product, undefined, page);
     responseService(res, 200, message.SUCCESS, { products, pageCount });
 };
@@ -27,7 +27,7 @@ productController.getAllProducts = async (req, res) => {
 productController.getProductByKeyword = async (req, res) => {
     let page = parseInt(req.query.page);
     let query = { productName: new RegExp(req.query.keyword, "i") };
-    let pageCount = Math.ceil((await Product.count()) / PAGE_SIZE);
+    let pageCount = Math.ceil((await Product.countDocuments()) / PAGE_SIZE);
     let product = await paginateService(Product, query, page);
     if (product.length === 0) return responseService(res, 404, message.NOT_FOUND);
     responseService(res, 200, message.SUCCESS, { product, pageCount });
@@ -50,20 +50,19 @@ productController.createProduct = async (req, res) => {
         typeName: product.typeName.toLowerCase(),
     }).lean();
 
-    let user = await User.findOne({ email: product.user }).lean();
-    for (let category of req.body.categoryName) {
-        category = await Category.findOne({ categoryName: category }).lean();
-        categories.push(category._id);
-    }
-    if (!user || !type || categories.length === 0)
-        return responseService(res, 404, message.NOT_FOUND);
+    let user = await User.findOne({ _id: req.user._id }).lean();
+    // for (let category of req.body.categoryName) {
+    //     category = await Category.findOne({ categoryName: category }).lean();
+    //     categories.push(category._id);
+    // }
+    // if (!user || !type || categories.length === 0)
+    if (!user || !type) return responseService(res, 404, message.NOT_FOUND);
 
-    categories = Product.generateCategoryIdArray(categories);
+    // categories = Product.generateCategoryIdArray(categories);
 
     let newProduct = {
         typeId: type._id,
         userId: user._id,
-        categoryId: categories,
         ...req.body,
     };
 
@@ -71,7 +70,24 @@ productController.createProduct = async (req, res) => {
 
     await product.save();
 
-    responseService(res, 200, message.CREATED, product);
+    responseService(res, 201, message.CREATED, product);
+};
+
+productController.insertMany = async (req, res) => {
+    let user = await User.findOne({ _id: req.user._id }).lean();
+    let type = await Type.findOne({ typeName: req.body[0].productType }).lean();
+    let result = req.body.map((entity) => {
+        return {
+            ...entity,
+            productType: type._id,
+            user: user._id,
+            status: 0,
+            price: parseInt(entity.price.split("$")[1]),
+        };
+    });
+    let products = await Product.insertMany(result);
+
+    responseService(res, 201, message.CREATED, products);
 };
 
 productController.deleteProductById = async (req, res) => {

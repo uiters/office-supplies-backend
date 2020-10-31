@@ -1,0 +1,392 @@
+[
+    {
+        "productName": "What I Know for Sure",
+        "price": "US$15.39",
+        "productDetails": {
+            "author": "Oprah Winfrey",
+            "published": "10 Nov 2015",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4472/9781447277668.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Dinosaur's Diary",
+        "price": "US$7.57",
+        "productDetails": {
+            "author": "Julia Donaldson",
+            "published": "28 Mar 2002",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1413/9780141313825.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Guest List",
+        "price": "US$13.40",
+        "productDetails": {
+            "author": "Lucy Foley",
+            "published": "17 Sep 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0082/9780008297190.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Song of Achilles",
+        "price": "US$11.57",
+        "productDetails": {
+            "author": "Madeline Miller",
+            "published": "24 Apr 2012",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4088/9781408821985.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Think Like a Monk",
+        "price": "US$28.14",
+        "productDetails": {
+            "author": "Jay Shetty",
+            "published": "22 Sep 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0083/9780008386429.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "A Song for the Dark Times",
+        "price": "US$24.33",
+        "productDetails": {
+            "author": "Ian Rankin",
+            "published": "01 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4091/9781409176978.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "12 Rules for Life",
+        "price": "US$15.13",
+        "productDetails": {
+            "author": "Jordan B. Peterson",
+            "published": "30 Aug 2019",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1419/9780141988511.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The 13-Storey Treehouse",
+        "price": "US$7.54",
+        "productDetails": {
+            "author": "Andy Griffiths",
+            "published": "20 Mar 2015",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4472/9781447279785.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Monkey Puzzle",
+        "price": "US$8.95",
+        "productDetails": {
+            "author": "Julia Donaldson",
+            "published": "13 Sep 2016",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5098/9781509812493.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Dune",
+        "price": "US$14.56",
+        "productDetails": {
+            "author": "Frank Herbert",
+            "published": "23 Jul 2015",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/3409/9780340960196.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Gift",
+        "price": "US$21.16",
+        "productDetails": {
+            "author": "Edith Eger",
+            "published": "03 Sep 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/8460/9781846046278.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Daily Stoic",
+        "price": "US$15.23",
+        "productDetails": {
+            "author": "Ryan Holiday",
+            "published": "27 Oct 2016",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7812/9781781257654.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Gruffalo",
+        "price": "US$9.39",
+        "productDetails": {
+            "author": "Julia Donaldson",
+            "published": "02 Mar 2006",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1424/9780142403877.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Night Monkey, Day Monkey",
+        "price": "US$12.42",
+        "productDetails": {
+            "author": "Julia Donaldson",
+            "published": "01 Oct 2016",
+            "format": "Board book"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4052/9781405283342.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Day the Crayons Quit",
+        "price": "US$14.70",
+        "productDetails": {
+            "author": "Drew Daywalt",
+            "published": "27 Jul 2016",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0075/9780007513765.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Dinosaurs Love Underpants",
+        "price": "US$11.66",
+        "productDetails": {
+            "author": "Claire Freedman",
+            "published": "05 Jun 2008",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/8473/9781847382108.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Invisible Women",
+        "price": "US$13.86",
+        "productDetails": {
+            "author": "Caroline Criado Perez",
+            "published": "21 Sep 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7847/9781784706289.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "A Squash and a Squeeze",
+        "price": "US$8.95",
+        "productDetails": {
+            "author": "Julia Donaldson",
+            "published": "23 Sep 2016",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5098/9781509804788.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Circe",
+        "price": "US$11.40",
+        "productDetails": {
+            "author": "Madeline Miller",
+            "published": "24 Apr 2019",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4088/9781408890042.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Case of the Bizarre Bouquets",
+        "price": "US$9.31",
+        "productDetails": {
+            "author": "Nancy Springer",
+            "published": "14 May 2009",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1424/9780142413906.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Thoughts of Dog",
+        "price": "US$13.81",
+        "productDetails": {
+            "author": "Matt Nelson",
+            "published": "12 Nov 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5248/9781524853648.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Violet Bent Backwards Over the Grass",
+        "price": "US$23.55",
+        "productDetails": {
+            "author": "Lana Del Rey",
+            "published": "01 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4711/9781471199660.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Paper Dolls",
+        "price": "US$9.45",
+        "productDetails": {
+            "author": "Julia Donaldson",
+            "published": "06 Jun 2013",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4472/9781447220145.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Cook, Eat, Repeat",
+        "price": "US$40.44",
+        "productDetails": {
+            "author": "Nigella Lawson",
+            "published": "29 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7847/9781784743666.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Flatshare",
+        "price": "US$11.03",
+        "productDetails": {
+            "author": "Beth O'Leary",
+            "published": "11 May 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7874/9781787474413.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Upstream",
+        "price": "US$24.11",
+        "productDetails": {
+            "author": "Dan Heath",
+            "published": "05 Mar 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7876/9781787632745.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Hobbit and the Lord of the Rings",
+        "price": "US$63.19",
+        "productDetails": {
+            "author": "J. R. R. Tolkien",
+            "published": "21 Oct 2014",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/5444/9780544445789.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Make Life Beautiful",
+        "price": "US$24.16",
+        "productDetails": {
+            "author": "Syd and Shea McGee",
+            "published": "26 Nov 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/7852/9780785233879.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Conversations with Friends",
+        "price": "US$12.08",
+        "productDetails": {
+            "author": "Sally Rooney",
+            "published": "01 Mar 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/5713/9780571333134.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "First 100 Words",
+        "price": "US$8.62",
+        "productDetails": {
+            "author": "Roger Priddy",
+            "published": "10 May 2011",
+            "format": "Board book"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/3125/9780312510787.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    }
+]

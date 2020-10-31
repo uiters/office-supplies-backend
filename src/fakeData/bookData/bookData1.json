@@ -1,0 +1,392 @@
+[
+    {
+        "productName": "Where the Crawdads Sing",
+        "price": "US$11.07",
+        "productDetails": {
+            "author": "Delia Owens",
+            "published": "12 Dec 2019",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4721/9781472154668.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Atomic Habits",
+        "price": "US$22.31",
+        "productDetails": {
+            "author": "James Clear",
+            "published": "27 Nov 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/8479/9781847941831.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Boy, The Mole, The Fox and The Horse",
+        "price": "US$25.53",
+        "productDetails": {
+            "author": "Charlie Mackesy",
+            "published": "04 Nov 2019",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5291/9781529105100.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Silent Patient",
+        "price": "US$10.31",
+        "productDetails": {
+            "author": "Alex Michaelides",
+            "published": "15 Jan 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4091/9781409181637.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Before the Coffee Gets Cold",
+        "price": "US$9.52",
+        "productDetails": {
+            "author": "Toshikazu Kawaguchi",
+            "published": "07 Nov 2019",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5290/9781529029581.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Friends: The One with the Surprises Advent Calendar",
+        "price": "US$26.84",
+        "productDetails": {
+            "author": "Insight Editions",
+            "published": "03 Nov 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/6472/9781647222611.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Untamed",
+        "price": "US$20.74",
+        "productDetails": {
+            "author": "Glennon Doyle",
+            "published": "25 May 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7850/9781785043352.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Power of Now",
+        "price": "US$10.95",
+        "productDetails": {
+            "author": "Eckhart Tolle",
+            "published": "01 Feb 2001",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/3407/9780340733509.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "My Life in Red and White",
+        "price": "US$29.09",
+        "productDetails": {
+            "author": "Arsene Wenger",
+            "published": "13 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4746/9781474618243.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Greenlights",
+        "price": "US$23.62",
+        "productDetails": {
+            "author": "Matthew McConaughey",
+            "published": "20 Oct 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4722/9781472280831.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Break the Mould",
+        "price": "US$10.45",
+        "productDetails": {
+            "author": "Sinead Burke",
+            "published": "13 Oct 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5263/9781526363336.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Girl, Woman, Other",
+        "price": "US$13.22",
+        "productDetails": {
+            "author": "Bernardine Evaristo",
+            "published": "21 Sep 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/2419/9780241984994.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "This is Going to Hurt",
+        "price": "US$10.07",
+        "productDetails": {
+            "author": "Adam Kay",
+            "published": "19 Apr 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5098/9781509858637.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Normal People",
+        "price": "US$11.80",
+        "productDetails": {
+            "author": "Sally Rooney",
+            "published": "22 Apr 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/5713/9780571334650.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Queen's Gambit",
+        "price": "US$10.13",
+        "productDetails": {
+            "author": "Walter Tevis",
+            "published": "14 Apr 2016",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4746/9781474600842.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Very Hungry Caterpillar",
+        "price": "US$9.54",
+        "productDetails": {
+            "author": "Eric Carle",
+            "published": "20 Feb 2019",
+            "format": "Board book"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/2410/9780241003008.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Giraffes Can't Dance",
+        "price": "US$12.07",
+        "productDetails": {
+            "author": "Giles Andreae",
+            "published": "01 May 2014",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/8412/9781841215655.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Little Fires Everywhere",
+        "price": "US$11.40",
+        "productDetails": {
+            "author": "Celeste Ng",
+            "published": "22 May 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/3491/9780349142920.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Man's Search For Meaning",
+        "price": "US$8.07",
+        "productDetails": {
+            "author": "Viktor E Frankl",
+            "published": "07 Feb 2008",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/8460/9781846041242.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Women Don't Owe You Pretty",
+        "price": "US$24.32",
+        "productDetails": {
+            "author": "Florence Given",
+            "published": "18 Jul 2020",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7884/9781788402118.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "My Own Words",
+        "price": "US$18.56",
+        "productDetails": {
+            "author": "Ruth Bader Ginsburg",
+            "published": "16 Oct 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/5011/9781501145254.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Body Keeps the Score",
+        "price": "US$15.05",
+        "productDetails": {
+            "author": "Bessel van der Kolk",
+            "published": "24 Sep 2015",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1419/9780141978611.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Dear Zoo",
+        "price": "US$8.70",
+        "productDetails": {
+            "author": "Rod Campbell",
+            "published": "08 May 2007",
+            "format": "Board book"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4169/9781416947370.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Look Inside Your Body",
+        "price": "US$18.97",
+        "productDetails": {
+            "author": "Louie Stowell",
+            "published": "01 Aug 2018",
+            "format": "Hardback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4095/9781409549475.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "1984",
+        "price": "US$10.46",
+        "productDetails": {
+            "author": "George Orwell",
+            "published": "01 Oct 2008",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/1410/9780141036144.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Rebecca",
+        "price": "US$11.46",
+        "productDetails": {
+            "author": "Daphne du Maurier",
+            "published": "03 May 2016",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/3490/9780349006574.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "With Hope in Your Heart",
+        "price": "US$21.55",
+        "productDetails": {
+            "author": "Martina Cox",
+            "published": "23 Dec 2020",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/7171/9780717190102.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Good Vibes, Good Life",
+        "price": "US$14.88",
+        "productDetails": {
+            "author": "Vex King",
+            "published": "04 Dec 2018",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/7881/9781788171823.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "Sapiens",
+        "price": "US$19.01",
+        "productDetails": {
+            "author": "Yuval Noah Harari",
+            "published": "15 Sep 2016",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0995/9780099590088.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    },
+    {
+        "productName": "The Chronicles of Narnia Box Set",
+        "price": "US$17.36",
+        "productDetails": {
+            "author": "C. S. Lewis",
+            "published": "10 Dec 2010",
+            "format": "Paperback"
+        },
+        "productImageUrl": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/0078/9780007811281.jpg",
+        "productType": "book",
+        "user": "hoang@gmail.com",
+        "quantity": 1
+    }
+]
