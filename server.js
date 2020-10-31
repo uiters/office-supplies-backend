@@ -28,6 +28,8 @@ const invoiceDetailRoute = require("./src/router/invoiceDetail.route");
 */
 
 dotenv.config();
+console.log(process.env.SECRET_KEY);
+
 
 const options = {
     definition: {

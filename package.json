@@ -18,6 +18,7 @@
     },
     "homepage": "https://gitlab.com/PhanHoangf/office-supplies-and-bookstore-app-backend#readme",
     "dependencies": {
+        "@sendgrid/mail": "^7.3.0",
         "@types/express": "^4.17.8",
         "@types/jsonwebtoken": "^8.5.0",
         "@types/mongoose": "^5.7.36",
@@ -44,7 +45,10 @@
         "typescript": "^4.0.3",
         "update": "^0.7.4"
     },
-    "lint-staged":{"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": ["prettier --write"
+    "lint-staged": {
+        "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+            "prettier --write",
+            "git add ."
         ]
     },
     "husky": {
