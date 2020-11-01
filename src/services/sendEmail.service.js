@@ -22,8 +22,8 @@ class SendEmailService {
     });
   }
 
-  sendResetPasswordEmail() {
-    return sgMail.send(this.options).catch((err) => console.log(err));
+  sendEmail() {
+    return sgMail.send(this.options);
   }
 }
 

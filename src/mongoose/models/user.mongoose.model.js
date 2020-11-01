@@ -24,6 +24,7 @@ const userSchema = new Schema(
         message: "email must have at least 6 character",
       },
     },
+    emailToken: String,
     password: {
       type: String,
       required: [true, "password is required"],

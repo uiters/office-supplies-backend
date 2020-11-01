@@ -3,17 +3,20 @@ const requestService = require("../services/request.service");
 const auth = require("../middleware/auth.middleware");
 const admin = require("../middleware/isAdmin.middleware");
 const {
-    getUser,
-    getCurrentUser,
-    createUser,
-    updateUser,
-    deleteUser,
-    getUserById,
+  getUser,
+  getCurrentUser,
+  createUser,
+  updateUser,
+  deleteUser,
+  getUserById,
+  verifyEmail,
 } = require("../controller/user.controller");
+const userController = require("../controller/user.controller");
+
 router.get("/", [auth, admin], requestService(getUser));
 router.get("/me", auth, requestService(getCurrentUser));
 router.get("/userid/:id", [auth, admin], requestService(getUserById));
-
+router.get("/email_verification/:token", requestService(verifyEmail));
 router.post("/register", requestService(createUser));
 
 /**

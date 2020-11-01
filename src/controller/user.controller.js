@@ -1,6 +1,8 @@
 const { User } = require("../mongoose/models/user.mongoose.model");
 const responseService = require("../services/response.service");
 const message = require("../constants/response.const");
+const SendEmailService = require("../services/sendEmail.service");
+const crypto = require("crypto");
 
 const userController = {};
 
@@ -27,17 +29,58 @@ userController.getUserById = async (req, res, next) => {
 };
 
 userController.createUser = async (req, res) => {
+  let transporter = new SendEmailService(req.body.email);
+
+  let emailToken = crypto.randomBytes(64).toString("hex");
+
+  transporter.createMailOptions(
+    "Email verification",
+    "oh la la",
+    `<p>You requested for Activate email</p>
+      <h3>click in this http://${req.headers.host}/api/user/email_verification/${emailToken} to activate your account</h3>`
+  );
+
+  console.log(req.headers.host);
+
   let user = new User({
     email: req.body.email,
+    emailToken: emailToken,
     password: req.body.password,
     profile: req.body.profile,
     isAdmin: req.body.isAdmin | false,
-    status: req.body.status | 0,
+    status: req.body.status | 1,
   });
+
+  await user.save().then((result) => {
+    transporter
+      .sendEmail()
+      .then((res) => console.log("email sent"))
+      .catch((err) => {
+        responseService(res, 400, "Bad request");
+      });
+  });
+
+  responseService(
+    res,
+    201,
+    "Please check your email to verify your account",
+    user
+  );
+};
+
+userController.verifyEmail = async (req, res) => {
+  let user = await User.findOne({ emailToken: req.params.token });
+
+  if (!user) {
+    responseService(res, 500, "Something went wrong");
+  }
+
+  user.status = 0;
+  user.emailToken = undefined;
 
   await user.save();
 
-  responseService(res, 201, message.CREATED, user);
+  responseService(res, 200, message.SUCCESS, user);
 };
 
 userController.updateUser = async (req, res, next) => {
