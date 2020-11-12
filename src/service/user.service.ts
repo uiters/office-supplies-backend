@@ -3,6 +3,7 @@ import { IUser, USER_STATUS } from '../models/user.model';
 import { UserModel } from '../mongoose/user.mongoose';
 import { AuthRequest, IPopulate } from '../types/utils';
 import SendEmailService, { IMailOptions } from '../service/utils/sendEmail.service';
+import jwt from 'jsonwebtoken';
 
 const transporter = new SendEmailService();
 
@@ -29,7 +30,7 @@ export default class UserService {
 
             return doc;
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     }
     public async getMe(id: string) {
@@ -61,10 +62,61 @@ export default class UserService {
 
     public async verifyUser(emailToken: string) {
         const user = await UserModel.findOne({ emailVerifiedToken: emailToken });
+        if (!user) return null;
         user.status = 1;
         user.emailVerifiedToken = '';
         const updatedUser = await user.save();
-        return user;
+        return updatedUser;
+    }
+
+    public async forgotPassword(email: string, req: AuthRequest) {
+        const user = await UserModel.findOne({ email });
+        if (!user) return null;
+
+        const resetPasswordToken = jwt.sign({ _id: user._id }, process.env.JWT_RESET_SECRET, {
+            expiresIn: process.env.JWT_RESET_EXPIRES,
+        });
+
+        const mailOptions: IMailOptions = {
+            toEmail: email,
+            subject: 'Reset password',
+            text: 'reset',
+            html: `<p>You requested for reset Password</p>
+            <h3>click in this link: http://${req.headers.host}/api/user/reset-password/${resetPasswordToken} to reset your password</h3>`,
+        };
+
+        transporter.createMailOptions(mailOptions);
+
+        const result = await transporter.sendMail();
+
+        if (result) {
+            user.passwordResetToken = resetPasswordToken;
+            const reset = await user.save();
+            return reset;
+        } else {
+            return null;
+        }
+    }
+    public async resetPassword(token: string) {
+        const user = await UserModel.findOne({ passwordResetToken: token });
+        if (!user) return null;
+        user.password = process.env.RESET_PASSWORD;
+
+        const mailOptions: IMailOptions = {
+            toEmail: user.email,
+            subject: 'Reset password',
+            text: 'reset',
+            html: `<p>You requested for reset Password</p>
+            <h3>Your current password has been reset to ${process.env.RESET_PASSWORD}</h3>
+            <h4>Please change this password!</h4>`,
+        };
+
+        transporter.createMailOptions(mailOptions);
+        const result = await transporter.sendMail();
+        if (result) {
+            const updatedUser = await user.save();
+            return updatedUser;
+        } else return null;
     }
 }
 

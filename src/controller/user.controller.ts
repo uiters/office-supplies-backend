@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from 'express';
 import UserService from '../service/user.service';
 import { AuthRequest } from '../types/utils';
 import crypto from 'crypto';
+import { use } from 'passport';
 
 const userService = new UserService();
 export class UserController {
@@ -87,6 +88,32 @@ export class UserController {
             const result = await userService.verifyUser(emailToken);
             if (!result) return res.status(404).json('Not found');
             res.status(200).json('User has been activated');
+        } catch (error) {
+            res.status(400).json('Failed');
+        }
+        return next();
+    }
+
+    public async forgotPassword(req: AuthRequest, res: Response, next: NextFunction) {
+        try {
+            const result = await userService.forgotPassword(req.body.email, req);
+            if (!result) {
+                return res.status(400).json('Not found');
+            }
+            res.status(200).json('Please check your email and follow the instruction');
+        } catch (error) {
+            res.status(400).json('Failed');
+        }
+        return next();
+    }
+
+    public async resetPassword(req: AuthRequest, res: Response, next: NextFunction) {
+        try {
+            const result = await userService.resetPassword(req.params.token);
+            if (!result) {
+                return res.status(400).json('Not found');
+            }
+            res.status(200).json('Please check your email');
         } catch (error) {
             res.status(400).json('Failed');
         }

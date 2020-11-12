@@ -11,9 +11,11 @@ const userController = new UserController();
 router.get('/:id', authJwt, isAdmin, userController.getUserById);
 router.get('/me', authJwt, userController.getMe);
 router.get('/email-verification/:token', userController.verifyUser);
+router.get('/reset-password/:token', userController.resetPassword);
 
 router.put('/', authJwt, editUserValidators, userController.updateUser);
 router.post('/', createUserValidators, userController.createUser);
+router.post('/forgot-password', userController.forgotPassword);
 
 router.delete('', authJwt, isAdmin, userController.deleteUser);
 
