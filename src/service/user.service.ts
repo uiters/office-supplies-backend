@@ -1,14 +1,14 @@
-import { NextFunction, Response } from 'express';
-import { IUser, USER_STATUS } from '../models/user.model';
+import { USER_STATUS } from '../models/user.model';
 import { UserModel } from '../mongoose/user.mongoose';
 import { AuthRequest, IPopulate } from '../types/utils';
 import SendEmailService, { IMailOptions } from '../service/utils/sendEmail.service';
 import jwt from 'jsonwebtoken';
+import { PAGINATE } from '../constants/paginate.const';
 
 const transporter = new SendEmailService();
 
 export default class UserService {
-    public async createUser(data: any, options = {}, req: AuthRequest) {
+    public async createUser(data: any, options: any, req: AuthRequest) {
         try {
             const mailOptions: IMailOptions = {
                 toEmail: data.email,
@@ -58,6 +58,18 @@ export default class UserService {
     public async getUserById(id: string) {
         const user = await UserModel.findById(id);
         return user;
+    }
+
+    public async getUser(page: number = 1) {
+        const skip = (page - 1) * PAGINATE.PAGE_SIZE;
+        const user = await UserModel.find().skip(skip).limit(PAGINATE.PAGE_SIZE);
+        const pageCount = Math.ceil((await UserModel.countDocuments()) / PAGINATE.PAGE_SIZE);
+        const hasNext = page < pageCount;
+        return {
+            user,
+            pageCount,
+            hasNext
+        };
     }
 
     public async verifyUser(emailToken: string) {

@@ -2,7 +2,6 @@ import { NextFunction, Request, Response } from 'express';
 import UserService from '../service/user.service';
 import { AuthRequest } from '../types/utils';
 import crypto from 'crypto';
-import { use } from 'passport';
 
 const userService = new UserService();
 export class UserController {
@@ -40,6 +39,18 @@ export class UserController {
             res.status(400).json('Failed');
         }
 
+        return next();
+    }
+
+    public async getUser(req: AuthRequest, res: Response, next: NextFunction) {
+        try {
+            const { page } = req.query;
+            const { user, pageCount, hasNext } = await userService.getUser(+page);
+            if (!user) return res.status(400).json('Failed');
+            res.status(200).json({ user, pageCount, hasNext });
+        } catch (error) {
+            res.status(400).json('Failed');
+        }
         return next();
     }
 
