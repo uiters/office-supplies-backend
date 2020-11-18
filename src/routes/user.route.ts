@@ -20,6 +20,6 @@ router.put('/', authJwt, editUserValidators, userController.updateUser);
 router.post('/', createUserValidators, userController.createUser);
 router.post('/forgot-password', userController.forgotPassword);
 
-router.delete('/', authJwt, isAdmin, userController.deleteUser);
+router.delete('/:id', authJwt, isAdmin, userController.deleteUser);
 
 export default router;

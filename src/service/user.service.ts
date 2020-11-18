@@ -68,7 +68,7 @@ export default class UserService {
         return {
             user,
             pageCount,
-            hasNext
+            hasNext,
         };
     }
 
@@ -113,6 +113,7 @@ export default class UserService {
         const user = await UserModel.findOne({ passwordResetToken: token });
         if (!user) return null;
         user.password = process.env.RESET_PASSWORD;
+        user.passwordResetToken = '';
 
         const mailOptions: IMailOptions = {
             toEmail: user.email,

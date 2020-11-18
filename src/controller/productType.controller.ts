@@ -8,11 +8,9 @@ export default class ProductTypeController {
     public async createType(req: AuthRequest, res: Response, next: NextFunction) {
         try {
             const { typeName } = req.body;
-            const newType = await productTypeService.createType(typeName);
-            newType.save((err) => {
-                if (err) res.status(400).json('Failed');
-                res.status(201).json(newType);
-            });
+            const newType = await productTypeService.createType(typeName.toLowerCase());
+            if (!newType) return res.status(400).json('Failed');
+            res.status(200).json(newType);
         } catch (error) {
             res.status(400).json('Failed');
         }
@@ -46,10 +44,10 @@ export default class ProductTypeController {
 
     public async updateType(req: AuthRequest, res: Response, next: NextFunction) {
         try {
-            const { id } = req.body;
-            const updatedType = await productTypeService.deleteType(id);
+            const { id, typeName } = req.body;
+            const updatedType = await productTypeService.updateType(id, typeName);
             if (!updatedType) return res.status(400).json('Not found');
-            res.status(200).json({ updatedType });
+            res.status(200).json(updatedType);
         } catch (error) {
             res.status(400).json('Failed');
         }

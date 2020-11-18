@@ -36,7 +36,7 @@ const userSchema = new mongoose.Schema(
             required: true,
         },
     },
-    { timestamps: true }
+    { toJSON: { virtuals: true }, timestamps: true }
 );
 
 userSchema.pre('save', async function save(next) {
@@ -64,5 +64,12 @@ userSchema.methods = {
     },
     comparePassword,
 };
+
+userSchema.virtual('products', {
+    path: 'product',
+    localField: '_id',
+    foreignField: 'userId',
+    option: { sort: { productName: 1 } },
+});
 
 export const UserModel = mongoose.model<IUser>('user', userSchema);
