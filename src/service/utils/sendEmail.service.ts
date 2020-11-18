@@ -26,7 +26,7 @@ export default class SendEmailService {
 
     public createMailOptions(options: IMailOptions) {
         this.mailOptions = {
-            from: process.env.SENDGRID_USER, // sender address
+            from: SENDGRID.SENDGRID_USER, // sender address
             to: options.toEmail, // list of receivers
             subject: options.subject, // Subject line
             text: options.text, // plaintext body
