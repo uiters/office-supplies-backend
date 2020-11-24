@@ -20,15 +20,18 @@ export default class UserService {
 
             transporter.createMailOptions(mailOptions);
 
-            transporter.sendMail().then((result) => {
-                console.log(result);
-            });
+            const response = await transporter.sendMail();
+            if (response) {
+                console.log(response, '<=== response');
+                const newUser = new UserModel(data);
 
-            const newUser = new UserModel(data);
+                const doc = await newUser.save();
 
-            const doc = await newUser.save();
-
-            return doc;
+                return doc;
+            }
+            else {
+                return null
+            }
         } catch (error) {
             console.log(error);
         }

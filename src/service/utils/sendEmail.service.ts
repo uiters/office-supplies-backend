@@ -3,6 +3,8 @@ import nodemailer from 'nodemailer';
 const SENDGRID = {
     SENDGRID_USER: 'phanhoang741@gmail.com',
     SENDGRID_PASSWORD: 'BypvRDf@46KpHbvasdasd',
+    SENDGRID_API_KEY: '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',
+    SENDGRID_DEFAULT: 'apikey'
 };
 export interface IMailOptions {
     toEmail: string;
@@ -18,14 +20,17 @@ export default class SendEmailService {
         this.transporter = nodemailer.createTransport({
             service: 'SendGrid',
             auth: {
-                user: SENDGRID.SENDGRID_USER,
-                pass: SENDGRID.SENDGRID_PASSWORD,
+                user: SENDGRID.SENDGRID_DEFAULT,
+                pass: SENDGRID.SENDGRID_API_KEY,
             },
         });
     }
 
     public createMailOptions(options: IMailOptions) {
         this.mailOptions = {
+            headers: {
+                'Authorization': `Bearer ${SENDGRID.SENDGRID_API_KEY}`,
+            },
             from: SENDGRID.SENDGRID_USER, // sender address
             to: options.toEmail, // list of receivers
             subject: options.subject, // Subject line
@@ -34,10 +39,7 @@ export default class SendEmailService {
         };
     }
 
-    public sendMail() {
-        return this.transporter.sendMail(this.mailOptions).catch((err) => {
-            console.log(err);
-            return;
-        });
+    public async sendMail() {
+        return await this.transporter.sendMail(this.mailOptions)
     }
 }

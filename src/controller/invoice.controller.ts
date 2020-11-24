@@ -16,11 +16,38 @@ export class InvoiceController {
         }
         return next();
     }
-    public async getInvoice(req: AuthRequest, res: Response, next: NextFunction) {
+    public async getInvoices(req: AuthRequest, res: Response, next: NextFunction) {
         try {
-            
+            const { _id } = req.user;
+            const foundInvoices = await invoiceService.getInvoices(_id);
+            if (!foundInvoices) res.status(404).json('Not found');
+            res.status(200).json(foundInvoices);
         } catch (error) {
-            
+            res.status(400).json('Failed');
+        }
+        return next();
+    }
+
+    public async deleteInvoice(req: AuthRequest, res: Response, next: NextFunction) {
+        try {
+            const { id } = req.body;
+            const deletedInvoice = await invoiceService.deleteInvoice(id);
+            if (!deletedInvoice) return res.status(404).json('Not found');
+            res.status(200).json(deletedInvoice);
+        } catch (error) {
+            res.status(400).json('Failed');
+        }
+        return next();
+    }
+
+    public async updateInvoiceStatus(req: AuthRequest, res: Response, next: NextFunction) {
+        try {
+            const { id } = req.body;
+            const updatedInvoice = await invoiceService.updateInvoiceStatus(id);
+            if (!updatedInvoice) return res.status(404).json('Not found');
+            res.status(200).json(updatedInvoice);
+        } catch (error) {
+            res.status(400).json('Failed');
         }
         return next();
     }

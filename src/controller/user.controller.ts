@@ -21,7 +21,8 @@ export class UserController {
                 isAdmin: isAdmin || false,
             };
             const result = await userService.createUser(newUser, undefined, req);
-            if (result) res.status(201).json('Check your email to activate your account');
+            if (!result) res.status(404).json('Error, please try again later!');
+            res.status(201).json('Check your email to activate your account');
         } catch (error) {
             res.status(400).json('Failed');
         }
