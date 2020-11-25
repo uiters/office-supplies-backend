@@ -4,6 +4,7 @@ import { AuthRequest, IPopulate } from '../types/utils';
 import SendEmailService, { IMailOptions } from '../service/utils/sendEmail.service';
 import jwt from 'jsonwebtoken';
 import { PAGINATE } from '../constants/paginate.const';
+import bcrypt from 'bcrypt'
 
 const transporter = new SendEmailService();
 
@@ -28,9 +29,8 @@ export default class UserService {
                 const doc = await newUser.save();
 
                 return doc;
-            }
-            else {
-                return null
+            } else {
+                return null;
             }
         } catch (error) {
             console.log(error);
@@ -58,6 +58,18 @@ export default class UserService {
         return updatedUser;
     }
 
+    public async changePassword(id: string, currentPassword: string, newPassword: string) {
+        let updatedUser;
+        const foundUser = await UserModel.findById(id);
+        if (!foundUser) return null;
+        const result = await bcrypt.compare(currentPassword, foundUser.password);
+        if(result){
+            foundUser.password = newPassword
+            updatedUser = await foundUser.save();
+            return updatedUser
+        }
+        return null
+    }
     public async getUserById(id: string) {
         const user = await UserModel.findById(id);
         return user;

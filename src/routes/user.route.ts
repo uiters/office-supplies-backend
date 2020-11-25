@@ -17,6 +17,7 @@ router.get('/reset-password/:token', userController.resetPassword);
 router.get('/', authJwt, isAdmin, userController.getUser);
 
 router.put('/', authJwt, editUserValidators, userController.updateUser);
+router.put('/change-password', authJwt, userController.changePassword);
 router.post('/', createUserValidators, userController.createUser);
 router.post('/forgot-password', userController.forgotPassword);
 

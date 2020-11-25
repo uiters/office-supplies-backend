@@ -131,4 +131,17 @@ export class UserController {
         }
         return next();
     }
+
+    public async changePassword(req: AuthRequest, res: Response, next: NextFunction) {
+        try {
+            const { _id } = req.user;
+            const { currentPassword, newPassword } = req.body;
+            const result = await userService.changePassword(_id, currentPassword, newPassword);
+            if (!result) return res.status(400).json('Current password not match, try again!');
+            return res.status(200).json('Sucess');
+        } catch (error) {
+            res.status(400).json('Failed');
+        }
+        return next();
+    }
 }
