@@ -16,7 +16,7 @@ export class InvoiceService {
   public async getInvoices(userId: string) {
     const foundInvoices = await invoiceModel
       .find({ userId })
-      .populate("userId")
+      .populate("userId", 'email').populate('getInvoiceDetails')
       .lean();
     if (foundInvoices) {
       return foundInvoices;

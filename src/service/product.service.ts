@@ -38,7 +38,6 @@ export default class ProductService {
     public async getUserProducts(userId: string, page: number = 1, queryParams: IQueryOptions) {
         const skip = (page - 1) * PAGINATE.PAGE_SIZE;
         const { sortBy, keyword } = queryParams;
-        console.log(sortBy, "<==== sortBy")
         const products = await ProductModel.find({
             $and: [{ userId: userId }, { productName: new RegExp(keyword, 'i') }],
         })

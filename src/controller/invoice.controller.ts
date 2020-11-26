@@ -30,7 +30,7 @@ export class InvoiceController {
 
     public async deleteInvoice(req: AuthRequest, res: Response, next: NextFunction) {
         try {
-            const { id } = req.body;
+            const { id } = req.params;
             const deletedInvoice = await invoiceService.deleteInvoice(id);
             if (!deletedInvoice) return res.status(404).json('Not found');
             res.status(200).json(deletedInvoice);
