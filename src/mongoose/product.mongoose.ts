@@ -43,9 +43,10 @@ const productSchema = new mongoose.Schema(
       type: Number,
       required: true
     },
-    discount: Number
+    discount: Number,
+    ratePoints: String
   },
-  { timestamps: true }
+  { timestamps: true, toJSON: { virtuals: true } }
 );
 
 export const ProductModel = mongoose.model<IProduct>("product", productSchema);
