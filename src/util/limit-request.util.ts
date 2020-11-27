@@ -1,8 +1,8 @@
 import limit from "express-rate-limit";
-import { LIMIT } from "../constants/environtment";
+import { COMMENT_LIMIT } from "../constants/environtment";
 
 export const createCommentLimiter = limit({
-  windowMs: LIMIT.time,
-  max: LIMIT.max,
-  message: LIMIT.message
+  windowMs: COMMENT_LIMIT.time,
+  max: COMMENT_LIMIT.max,
+  message: COMMENT_LIMIT.message
 });

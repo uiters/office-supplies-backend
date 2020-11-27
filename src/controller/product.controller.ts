@@ -64,12 +64,12 @@ export default class ProductController {
       const { _id } = req.user;
       const { page } = req.query;
       const {
-        products,
+        result,
         pageCount,
         hasNext
       } = await productService.getUserProducts(_id, +page, req.query);
-      if (!products) return res.status(404).json("Not found");
-      res.status(200).json({ products, pageCount, hasNext });
+      if (!result) return res.status(404).json("Not found");
+      res.status(200).json({ result, pageCount, hasNext });
     } catch (error) {
       res.status(400).json("Failed");
     }

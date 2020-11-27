@@ -1,4 +1,4 @@
-export const LIMIT = {
+export const COMMENT_LIMIT = {
   time: 60 * 60 * 1000, // 1 hour
   max: 10,
   message:

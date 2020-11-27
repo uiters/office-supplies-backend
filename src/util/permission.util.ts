@@ -6,7 +6,7 @@ export const isAdmin = async (req: AuthRequest, res: Response, next: NextFunctio
     const { isAdmin } = req.user;
     if (isAdmin) {
         next();
-    } else return res.status(401).json('You don not have permisson to access the API');
+    } else return res.status(401).json('You do not have permisson to access the API');
 };
 
 export const isActivate = async (req: AuthRequest, res: Response, next: NextFunction) => {
