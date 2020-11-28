@@ -17,9 +17,16 @@ export default class ProductService {
 
     public async getProduct(page: number = 1, queryParams: IQueryOptions) {
         const skip = (page - 1) * PAGINATE.PAGE_SIZE;
-        const { sortBy, keyword } = queryParams;
+        const { sortBy, keyword, typeId } = queryParams;
+
+        let query: any[] = [{ productName: new RegExp(keyword, 'i') }];
+
+        if (typeId) query.push({ typeId });
+
+        console.log(query);
+
         let products = await ProductModel.find({
-            productName: new RegExp(keyword, 'i'),
+            $and: query,
         })
             .skip(skip)
             .limit(PAGINATE.PAGE_SIZE)
@@ -118,15 +125,18 @@ export default class ProductService {
             .populate('typeId', '-_id typeName')
             .populate('userId', '-_id email')
             .populate('categoriesId')
-            .populate('getComments', '-_id -productId comment userId')
+            .populate('getComments', '-_id -productId comment userId');
 
-        return foundProduct;
+        const result = this._updateRatePoints(foundProduct._id);
+
+        return result;
     }
 }
 
 interface IQueryOptions {
-    keyword?: string;
-    sortBy?: SORT_BY;
+    keyword?: any;
+    sortBy?: any;
+    typeId?: any;
 }
 
 enum SORT_BY {

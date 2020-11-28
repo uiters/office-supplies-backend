@@ -6,8 +6,9 @@ import { createProductValidate } from "../util/validatiors/product.validate";
 const router = express.Router();
 const productController = new ProductController();
 
-// ** http://localhost:3000/api/product/?page=?&keyword=?&sortBy=?
+// ** http://localhost:3000/api/product/?page=?&keyword=?&sortBy=?&typeId=?
 router.get("/", productController.getProducts);
+
 router.get("/product-id/:id", authJwt, productController.getProductById);
 
 // ** http://localhost:3000/api/product/user-products/?page=?&keyword=?&sortBy=?
