@@ -52,5 +52,6 @@ const server = new App().app;
 server.use(errorHandler());
 
 server.listen(process.env.PORT, () => {
-    console.log('server is running on Port: ', process.env.PORT);
+    console.log('server is running on Port:', process.env.PORT);
+    console.log('Ctrl + C to exit');
 });

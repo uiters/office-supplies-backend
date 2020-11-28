@@ -23,14 +23,14 @@ export default class ProductService {
 
         if (typeId) query.push({ typeId });
 
-        console.log(query);
-
         let products = await ProductModel.find({
             $and: query,
         })
             .skip(skip)
             .limit(PAGINATE.PAGE_SIZE)
-            .sort(`${sortBy}`);
+            .sort(`${sortBy}`)
+            .where('status')
+            .equals(1);
         const pageCount = Math.ceil((await ProductModel.countDocuments()) / PAGINATE.PAGE_SIZE);
         const hasNext = page < pageCount;
 
@@ -75,7 +75,9 @@ export default class ProductService {
         })
             .skip(skip)
             .limit(PAGINATE.PAGE_SIZE)
-            .sort(`${sortBy}`);
+            .sort(`${sortBy}`)
+            .where('status')
+            .equals(1);
         const pageCount = Math.ceil((await ProductModel.countDocuments()) / PAGINATE.PAGE_SIZE);
         const hasNext = page < pageCount;
         let result = await Promise.all(
@@ -137,11 +139,6 @@ interface IQueryOptions {
     keyword?: any;
     sortBy?: any;
     typeId?: any;
-}
-
-enum SORT_BY {
-    PRODUCT_NAME = 'productName',
-    PRICE = 'price',
 }
 
 // productName: new RegExp(req.query.keyword, "i")
