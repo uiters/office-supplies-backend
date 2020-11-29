@@ -30,7 +30,7 @@ export default class ProductService {
             .limit(PAGINATE.PAGE_SIZE)
             .sort(`${sortBy}`)
             .where('status')
-            .equals(1);
+            .equals(0); //! change to one after test
         const pageCount = Math.ceil((await ProductModel.countDocuments()) / PAGINATE.PAGE_SIZE);
         const hasNext = page < pageCount;
 
