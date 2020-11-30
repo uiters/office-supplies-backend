@@ -6,6 +6,13 @@ export enum PRODUCT_STATUS {
   OFFLINE = 0,
   ONLINE = 1
 }
+
+export const PEN_COLOR = {
+  BLUE: "#0953ad",
+  RED: "#fa0c0c",
+  BLACK: "#1d1717"
+};
+
 export interface IProduct extends Document {
   productName: string;
   userId: string;
@@ -43,6 +50,12 @@ export interface IBook extends IProductProperties {
   };
 }
 
+export interface IPEN extends IProductProperties {
+  productDetails: {
+    color: string[];
+  };
+}
+
 interface IAbstractProductFactory {
   createBookProduct(): IAbstractBookProduct;
 }
@@ -51,10 +64,19 @@ class ConcreteFactory implements IAbstractProductFactory {
   public createBookProduct(): IAbstractBookProduct {
     return new ConcreteBook();
   }
+
+  public createPenProduct(): IAbstractPenProduct {
+    return new ConcretePen();
+  }
 }
 
 interface IAbstractBookProduct {
   createBook(data: IBook): IProduct;
+}
+
+interface IAbstractPenProduct {
+  createBallPointPen(data: IPEN): IProduct;
+  createPencil(data: IPEN): IProduct;
 }
 
 class ConcreteBook implements IAbstractBookProduct {
@@ -77,9 +99,49 @@ class ConcreteBook implements IAbstractBookProduct {
   }
 }
 
-export function director(type: string, data: any) {
+class ConcretePen implements IAbstractPenProduct {
+  public createBallPointPen(data: IPEN): IProduct {
+    const ballPointPen = new ProductModel({
+      productName: data.productName,
+      userId: data.userId,
+      categoriesId: data.categoriesId,
+      typeId: data.typeId,
+      price: data.price,
+      productDetails: [PEN_COLOR.BLUE, PEN_COLOR.RED, PEN_COLOR.BLACK],
+      status: 0,
+      description: data.description,
+      productImage: data.productImage,
+      quantity: data.quantity,
+      discount: data.discount
+    });
+    return ballPointPen;
+  }
+  public createPencil(data: IPEN): IProduct {
+    const pencil = new ProductModel({
+      productName: data.productName,
+      userId: data.userId,
+      categoriesId: data.categoriesId,
+      typeId: data.typeId,
+      price: data.price,
+      productDetails: [PEN_COLOR.BLACK],
+      status: 0,
+      description: data.description,
+      productImage: data.productImage,
+      quantity: data.quantity,
+      discount: data.discount
+    });
+    return pencil;
+  }
+}
+
+export function director(type: string, data: any, category?: string) {
+  const factory = new ConcreteFactory();
   switch (type) {
     case "book":
       return new ConcreteFactory().createBookProduct().createBook(data);
+    case "pen":
+      if (category === "pencil") {
+        return factory.createPenProduct().createPencil(data);
+      } else return factory.createPenProduct().createBallPointPen(data);
   }
 }

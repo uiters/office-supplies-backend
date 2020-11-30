@@ -3,13 +3,20 @@ import { director, IBook, IProduct } from "../models/product.model";
 import { ProductModel } from "../mongoose/product.mongoose";
 import { ProductTypeModel } from "../mongoose/productType.mongoose";
 import RatingService from "./rating.service";
+import { CategoryModel } from "../mongoose/category.mongoose";
 
 const ratingService = new RatingService();
 export default class ProductService {
   public async createProduct(data: any) {
     const type = await ProductTypeModel.findById(data.typeId);
     if (!type) return null;
-    const newProduct = director(type.typeName, data);
+    const category = await CategoryModel.findById(data.categoriesId[0]);
+    if (!category) return null;
+    const newProduct = director(
+      type.typeName,
+      data,
+      category.categoryName.toLowerCase()
+    );
     const doc = await newProduct.save();
 
     return doc;
