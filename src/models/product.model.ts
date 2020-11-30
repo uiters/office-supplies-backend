@@ -1,5 +1,6 @@
 import { Document } from "mongoose";
 import { ProductModel } from "../mongoose/product.mongoose";
+import { ICategory } from "./category.model";
 
 export enum PRODUCT_STATUS {
   OFFLINE = 0,
@@ -8,7 +9,7 @@ export enum PRODUCT_STATUS {
 export interface IProduct extends Document {
   productName: string;
   userId: string;
-  categoriesId: string[];
+  categoriesId: ICategory[];
   typeId: string;
   price: number;
   productDetails: any;
@@ -23,7 +24,7 @@ export interface IProduct extends Document {
 export interface IProductProperties {
   productName: string;
   userId: string;
-  categoriesId: string[];
+  categoriesId: ICategory[];
   typeId: string;
   price: number;
   status: PRODUCT_STATUS;

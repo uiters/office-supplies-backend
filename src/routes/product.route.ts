@@ -6,13 +6,13 @@ import { createProductValidate } from "../util/validatiors/product.validate";
 const router = express.Router();
 const productController = new ProductController();
 
-// ** http://localhost:3000/api/product/?page=?&keyword=?&sortBy=?&typeId=?
+// ** http://localhost:3000/api/product/?page=?&keyword=?&sortBy=?&typeId=?&categoryId=?
 router.get("/", productController.getProducts);
 
 router.get("/product-id/:id", authJwt, productController.getProductById);
 
-// ** http://localhost:3000/api/product/user-products/?page=?&keyword=?&sortBy=?
-router.get("/user-products", authJwt, productController.getUserProducts);
+// ** http://localhost:3000/api/product/user-products/:id?page=?&keyword=?&sortBy=?&typeId=?&categoryId
+router.get("/user-products/:id", authJwt, productController.getUserProducts);
 
 router.post(
   "/",
