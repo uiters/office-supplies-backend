@@ -10,7 +10,9 @@ export default class ProductService {
   public async createProduct(data: any) {
     const type = await ProductTypeModel.findById(data.typeId);
     if (!type) return null;
-    const category = await CategoryModel.findById(data.categoriesId[0]);
+    const category = data.categoriesId
+      ? await CategoryModel.findById(data.categoriesId[0])
+      : null;
     if (!category) return null;
     const newProduct = director(
       type.typeName,
@@ -18,7 +20,6 @@ export default class ProductService {
       category.categoryName.toLowerCase()
     );
     const doc = await newProduct.save();
-
     return doc;
   }
 
@@ -31,13 +32,13 @@ export default class ProductService {
     if (typeId) query.push({ typeId });
 
     let products = await ProductModel.find({
-      $and: query
+      $and: query,
     })
       .skip(skip)
       .limit(PAGINATE.PAGE_SIZE)
       .sort(`${sortBy}`)
       .where("status")
-      .equals(0); //! change to one after test
+      .equals(1); //! change to one after test
 
     const pageCount = Math.ceil(
       (await ProductModel.countDocuments()) / PAGINATE.PAGE_SIZE
@@ -48,7 +49,7 @@ export default class ProductService {
       products = this._filterProductByCategory(products, categoryId);
 
     let result = await Promise.all(
-      products.map(prod => {
+      products.map((prod) => {
         return this._updateRatePoints(prod._id);
       })
     );
@@ -56,7 +57,7 @@ export default class ProductService {
     return {
       result,
       pageCount,
-      hasNext
+      hasNext,
     };
   }
 
@@ -69,19 +70,21 @@ export default class ProductService {
     if (isNaN(+foundProduct.ratePoints)) {
       foundProduct.ratePoints = "0";
     }
-    const updatedProduct = await foundProduct.save().then(prod =>
-      prod
-        .populate("typeId", "-_id typeName")
-        .populate("userId", "-_id email")
-        .populate("categoriesId")
-        .populate("getComments", "-_id comment userId")
-        .execPopulate()
-    );
+    const updatedProduct = await foundProduct
+      .save()
+      .then((prod) =>
+        prod
+          .populate("typeId", "-_id typeName")
+          .populate("userId", "-_id email")
+          .populate("categoriesId")
+          .populate("getComments", "-_id comment userId")
+          .execPopulate()
+      );
     return updatedProduct;
   }
 
   private _filterProductByCategory(products: IProduct[], categoryId: string) {
-    return products.filter(prod => prod.categoriesId[0]._id == categoryId);
+    return products.filter((prod) => prod.categoriesId[0]._id == categoryId);
   }
 
   public async getUserProducts(
@@ -95,7 +98,7 @@ export default class ProductService {
 
     const query: any[] = [
       { userId: userId },
-      { productName: new RegExp(keyword, "i") }
+      { productName: new RegExp(keyword, "i") },
     ];
 
     if (typeId) query.push({ typeId });
@@ -104,7 +107,7 @@ export default class ProductService {
     console.log(query);
 
     let products = await ProductModel.find({
-      $and: query
+      $and: query,
     })
       .skip(skip)
       .limit(PAGINATE.PAGE_SIZE)
@@ -122,14 +125,14 @@ export default class ProductService {
     const hasNext = page < pageCount;
 
     let result = await Promise.all(
-      products.map(prod => {
+      products.map((prod) => {
         return this._updateRatePoints(prod._id);
       })
     );
     return {
       result,
       pageCount,
-      hasNext
+      hasNext,
     };
   }
 
@@ -150,14 +153,16 @@ export default class ProductService {
     if (data.quantity !== undefined) foundProduct.quantity = data.quantity;
     if (data.discount !== undefined) foundProduct.discount = data.discount;
 
-    const updatedProduct = foundProduct.save().then(product =>
-      product
-        .populate("typeId", "-_id typeName")
-        .populate("userId", "-_id email")
-        .populate("categoriesId")
-        .populate("getComments", "-_id comment userId")
-        .execPopulate()
-    );
+    const updatedProduct = foundProduct
+      .save()
+      .then((product) =>
+        product
+          .populate("typeId", "-_id typeName")
+          .populate("userId", "-_id email")
+          .populate("categoriesId")
+          .populate("getComments", "-_id comment userId")
+          .execPopulate()
+      );
     return updatedProduct;
   }
 

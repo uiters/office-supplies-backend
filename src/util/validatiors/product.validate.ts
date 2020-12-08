@@ -6,4 +6,5 @@ export const createProductValidate = validate([
     check('typeId').not().isEmpty(),
     check('price').not().isEmpty(),
     check('productImage').not().isEmpty(),
+    check('categoriesId').not().isEmpty()
 ]);

@@ -88,7 +88,7 @@ class ConcreteBook implements IAbstractBookProduct {
       typeId: data.typeId,
       price: data.price,
       productDetails: data.productDetails,
-      status: 0,
+      status: 1,
       description: data.description,
       productImage: data.productImage,
       quantity: data.quantity,

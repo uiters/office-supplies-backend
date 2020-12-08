@@ -1,4 +1,3 @@
-import { Console } from "console";
 import { NextFunction, Response } from "express";
 import { IBook } from "../models/product.model";
 import ProductService from "../service/product.service";
