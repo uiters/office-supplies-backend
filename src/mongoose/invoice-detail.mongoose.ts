@@ -10,6 +10,7 @@ const invoiceDetail = new moongose.Schema(
         sellerId: {
             type: moongose.Types.ObjectId,
             required: true,
+            ref: 'user'
         },
         productId: {
             type: moongose.Types.ObjectId,

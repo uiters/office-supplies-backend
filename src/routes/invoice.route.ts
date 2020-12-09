@@ -7,6 +7,7 @@ const router = express.Router();
 const invoiceController = new InvoiceController();
 
 router.get('/', authJwt, invoiceController.getInvoices);
+// router.get('/', authJwt, invoiceController.)
 
 router.delete('/:id', authJwt, isAdmin, invoiceController.deleteInvoice);
 export default router;
