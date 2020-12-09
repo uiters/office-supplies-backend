@@ -59,4 +59,8 @@ productSchema.virtual('getComments', {
     foreignField: 'productId',
 });
 
+// productSchema.pre('find', function () {
+//     this.populate('userId', '-_id email');
+// });
+
 export const ProductModel = mongoose.model<IProduct>('product', productSchema);

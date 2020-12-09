@@ -1,14 +1,16 @@
 import { Document } from 'mongoose';
+import { IInvoiceDetail, IInvoiceDetailModel } from './invoice-detail.model';
 
 export enum INVOICE_STATUS {
-    WAITTING = 1,
-    SHIPPED = 2,
+    IN_PROGRESS = 0,
+    SHIPPED = 1,
 }
 export interface IInvoice extends Document {
     userId: string;
     total: number;
     address: IAddress;
     status: INVOICE_STATUS;
+    getInvoiceDetails?: IInvoiceDetailModel[]
 }
 
 export interface IAddress {

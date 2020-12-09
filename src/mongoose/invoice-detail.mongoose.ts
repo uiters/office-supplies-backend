@@ -1,9 +1,13 @@
 import moongose from 'mongoose';
-import { IInvoiceDetail } from '../models/invoice-detail.model';
+import { IInvoiceDetail, INVOICE_DETAIL_STATUS } from '../models/invoice-detail.model';
 
 const invoiceDetail = new moongose.Schema(
     {
         invoiceId: {
+            type: moongose.Types.ObjectId,
+            required: true,
+        },
+        sellerId: {
             type: moongose.Types.ObjectId,
             required: true,
         },
@@ -19,6 +23,15 @@ const invoiceDetail = new moongose.Schema(
         total: {
             type: Number,
             required: true,
+        },
+        status: {
+            type: Number,
+            required: true,
+            validate: {
+                validator: (value: INVOICE_DETAIL_STATUS) => {
+                    return Object.values(INVOICE_DETAIL_STATUS).includes(value);
+                },
+            },
         },
     },
     { timestamps: true }
