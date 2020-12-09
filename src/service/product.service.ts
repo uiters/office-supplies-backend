@@ -75,7 +75,7 @@ export default class ProductService {
       .then((prod) =>
         prod
           .populate("typeId", "-_id typeName")
-          .populate("userId", "-_id email")
+          .populate("userId", "_id email")
           .populate("categoriesId")
           .populate("getComments", "-_id comment userId")
           .execPopulate()
@@ -158,7 +158,7 @@ export default class ProductService {
       .then((product) =>
         product
           .populate("typeId", "-_id typeName")
-          .populate("userId", "-_id email")
+          .populate("userId", "_id email")
           .populate("categoriesId")
           .populate("getComments", "-_id comment userId")
           .execPopulate()
