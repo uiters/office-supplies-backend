@@ -3,3 +3,6 @@
 node_modules
 .env
 /dist
+crawlData.service.js
+crawlData.service.ts
+bookData1.json

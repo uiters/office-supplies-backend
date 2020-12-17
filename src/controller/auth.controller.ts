@@ -1,6 +1,5 @@
 import { NextFunction, Response } from 'express';
-import { UserModel } from '../mongoose/user.mongoose';
-import { AuthService } from '../service/auth.serivce';
+import { AuthService } from '../service/auth.service';
 import { AuthRequest } from '../types/utils';
 
 const authService = new AuthService();

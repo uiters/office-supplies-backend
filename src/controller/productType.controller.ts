@@ -1,6 +1,5 @@
 import { NextFunction, Response } from 'express';
-import { ProductTypeModel } from '../mongoose/productType.mongoose';
-import ProductTypeService from '../service/productType.serivce';
+import ProductTypeService from '../service/productType.service';
 import { AuthRequest } from '../types/utils';
 
 const productTypeService = new ProductTypeService();

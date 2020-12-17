@@ -7,7 +7,8 @@
     "start": "node dist/app.js",
     "dev": "nodemon src/app.ts",
     "prod": "tsc && node ./dist/app.js",
-    "build": "tsc -p ."
+    "build": "tsc -p .",
+    "crawl": "tsc src/service/crawData.service.ts"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "dependencies": {
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
@@ -31,6 +33,7 @@
     "express-validator": "^6.6.1",
     "helmet": "^4.2.0",
     "husky": "^4.3.0",
+    "i": "^0.3.6",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.20",
     "mongoose": "^5.10.11",
@@ -38,10 +41,12 @@
     "nodemailer": "^6.4.15",
     "nodemailer-sendgrid-transport": "^0.2.0",
     "nodemon": "^2.0.6",
+    "npm": "^6.14.9",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
-    "redis": "^3.0.2"
+    "redis": "^3.0.2",
+    "request-promise": "^4.2.6"
   },
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",

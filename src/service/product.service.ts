@@ -13,11 +13,10 @@ export default class ProductService {
     const category = data.categoriesId
       ? await CategoryModel.findById(data.categoriesId[0])
       : null;
-    if (!category) return null;
     const newProduct = director(
       type.typeName,
       data,
-      category.categoryName.toLowerCase()
+      category ? category.categoryName.toLowerCase() : null
     );
     const doc = await newProduct.save();
     return doc;
