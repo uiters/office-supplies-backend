@@ -38,4 +38,8 @@ invoiceSchema.virtual('getInvoiceDetails', {
     options: { sort: { total: 1 } },
 });
 
+invoiceSchema.pre('find', function () {
+    this.populate('userId', 'profile');
+});
+
 export const invoiceModel = mongoose.model<IInvoice>('invoice', invoiceSchema);
