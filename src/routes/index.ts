@@ -8,6 +8,7 @@ import invoiceRoutes from './invoice.route';
 import invoiceDetailRoutes from './invoice-detail.route';
 import ratingRoutes from './rating.route';
 import commentRoutes from './comment.route';
+import statisticRoutes from './statistic.route';
 
 export class Routes {
     public init(app: express.Application): void {
@@ -20,5 +21,6 @@ export class Routes {
         app.use('/api/invoice-detail', invoiceDetailRoutes);
         app.use('/api/rating', ratingRoutes);
         app.use('/api/comment', commentRoutes);
+        app.use('/api/statistic', statisticRoutes);
     }
 }
