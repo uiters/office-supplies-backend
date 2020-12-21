@@ -39,7 +39,7 @@ invoiceSchema.virtual('getInvoiceDetails', {
 });
 
 invoiceSchema.pre('find', function () {
-    this.populate('userId', 'profile');
+    this.populate('userId', 'profile address');
 });
 
 export const invoiceModel = mongoose.model<IInvoice>('invoice', invoiceSchema);
