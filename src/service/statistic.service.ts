@@ -3,12 +3,12 @@ import { ProductModel } from '../mongoose/product.mongoose';
 
 export class StatisticService {
     public async totalProducts() {
-        const products = await ProductModel.find();
-        let total = 0;
-        for (let product of products) {
-            total += product.quantity;
-        }
-        return total;
+        const products = await ProductModel.find().countDocuments();
+        // let total = 0;
+        // for (let product of products) {
+        //     total += product.quantity;
+        // }
+        return products;
     }
 
     public async totalInvoices() {
