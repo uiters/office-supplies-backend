@@ -27,7 +27,7 @@ export default class InvoiceDetailService implements IInvoiceDetailService {
         const foundInvoiceDetail = await InvoiceDetailModel.findById(id)
             .populate('productId')
             .populate('sellerId', 'profile email')
-            .populate('invoiceId', 'userId')
+            .populate('invoiceId', 'userId');
         if (!foundInvoiceDetail) return null;
         // const doc = await foundInvoiceDetail.populate('productId');
         return foundInvoiceDetail;
@@ -101,5 +101,10 @@ export default class InvoiceDetailService implements IInvoiceDetailService {
         await invoiceService.updateInvoiceStatusV1(foundInvoiceDetail.invoiceId);
 
         return updatedInvoiceDetailStatus;
+    }
+
+    public async countTotalInvoice() {
+        const total = await InvoiceDetailModel.find({ status: 1 });
+        return total.length;
     }
 }

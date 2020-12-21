@@ -83,4 +83,13 @@ export default class InvoiceDetailController {
 
         return next();
     }
+    public async countTotalInvoice(req: AuthRequest, res: Response, next: NextFunction) {
+        try {
+            const total = invoiceDetailService.countTotalInvoice();
+            return res.status(200).json({ total });
+        } catch (error) {
+            res.status(400).json('Failed');
+        }
+        return next();
+    }
 }
