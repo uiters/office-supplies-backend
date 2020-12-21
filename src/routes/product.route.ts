@@ -9,7 +9,7 @@ const productController = new ProductController();
 
 // ** http://localhost:3000/api/product/?page=?&keyword=?&sortBy=?&typeId=?&categoryId=?
 router.get('/', productController.getProducts);
-router.get('/product-admin', authJwt, isAdmin, productController.adminGetProducts);
+router.get('/product-admin', authJwt, productController.adminGetProducts);
 
 router.get('/product-id/:id', authJwt, productController.getProductById);
 
