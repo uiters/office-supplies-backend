@@ -16,7 +16,7 @@ export const PEN_COLOR = {
 export interface IProduct extends Document {
     productName: string;
     userId: string;
-    categoriesId: ICategory[];
+    categoriesId: string[];
     typeId: string;
     price: number;
     productDetails: any;
@@ -31,7 +31,7 @@ export interface IProduct extends Document {
 export interface IProductProperties {
     productName: string;
     userId: string;
-    categoriesId: ICategory[];
+    categoriesId: string[];
     typeId: string;
     price: number;
     status: PRODUCT_STATUS;

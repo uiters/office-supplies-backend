@@ -29,6 +29,7 @@ export default class ProductController {
                 },
                 req
             );
+            console.log(result, '<== res');
             res.status(200).json({ result, pageCount, hasNext });
         } catch (error) {
             res.status(400).json('Failed');

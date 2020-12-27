@@ -27,6 +27,7 @@ export default class ProductService {
         const skip = (page - 1) * PAGINATE.PAGE_SIZE;
         const { sortBy, keyword, typeId, categoryId } = queryParams;
 
+
         let query: any[] = [{ productName: new RegExp(keyword, 'i') }];
 
         if (typeId) query.push({ typeId });
@@ -38,18 +39,19 @@ export default class ProductService {
             .limit(PAGINATE.PAGE_SIZE)
             .sort(`${sortBy}`)
             .where('status')
-            .equals(1); //! change to one after test
+            .equals(1); //! change to 1 after test
 
         const pageCount = Math.ceil((await ProductModel.countDocuments()) / PAGINATE.PAGE_SIZE);
         const hasNext = page < pageCount;
-
         if (categoryId) products = this._filterProductByCategory(products, categoryId);
 
         let result = await Promise.all(
             products.map((prod) => {
+                console.log(prod, '<== log');
                 return this._updateRatePoints(prod._id);
             })
         );
+
 
         return {
             result,
@@ -79,7 +81,7 @@ export default class ProductService {
     }
 
     private _filterProductByCategory(products: IProduct[], categoryId: string) {
-        return products.filter((prod) => prod.categoriesId[0]._id == categoryId);
+        return products.filter((prod) => prod.categoriesId.includes(categoryId));
     }
 
     public async getUserProducts(userId: string, page: number = 1, queryParams: IQueryOptions) {
@@ -90,9 +92,6 @@ export default class ProductService {
         const query: any[] = [{ userId: userId }, { productName: new RegExp(keyword, 'i') }];
 
         if (typeId) query.push({ typeId });
-        // if (categoryId) query.push({ categoriesId[0]: categoryId });
-
-        console.log(query);
 
         let products = await ProductModel.find({
             $and: query,
@@ -114,6 +113,7 @@ export default class ProductService {
                 return this._updateRatePoints(prod._id);
             })
         );
+        console.log(result);
         return {
             result,
             pageCount,
