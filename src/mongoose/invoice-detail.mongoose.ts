@@ -42,7 +42,7 @@ const invoiceDetail = new moongose.Schema(
 invoiceDetail.pre('find', function () {
     this.populate('sellerId', 'profile')
         .populate('productId', 'productName')
-        .populate('invoiceId');
+        // .populate('invoiceId');
 });
 
 export const InvoiceDetailModel = moongose.model<IInvoiceDetail>('invoicedetail', invoiceDetail);
