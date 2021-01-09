@@ -25,8 +25,8 @@ const invoiceService = new InvoiceService();
 export default class InvoiceDetailService implements IInvoiceDetailService {
     public async getInvoiceDetailById(id: string) {
         const foundInvoiceDetail = await InvoiceDetailModel.findById(id)
-            // .populate('productId')
-            // .populate('sellerId', 'profile email')
+            .populate('productId')
+            .populate('sellerId', 'profile email')
             .populate('invoiceId', 'userId');
         if (!foundInvoiceDetail) return null;
         // const doc = await foundInvoiceDetail.populate('productId');
@@ -68,9 +68,9 @@ export default class InvoiceDetailService implements IInvoiceDetailService {
 
     public async getSellerInvoiceDetail(sellerId: string) {
         const foundInvoiceDetail = await InvoiceDetailModel.find({ sellerId })
-            // .populate('productId')
-            // .populate('sellerId', 'profile')
-            // .populate('invoiceId', 'userId');
+            .populate('productId')
+            .populate('sellerId', 'profile')
+            .populate('invoiceId', 'userId');
 
         if (!foundInvoiceDetail) return null;
 
