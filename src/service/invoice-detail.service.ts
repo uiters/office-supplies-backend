@@ -26,7 +26,7 @@ export default class InvoiceDetailService implements IInvoiceDetailService {
     public async getInvoiceDetailById(id: string) {
         const foundInvoiceDetail = await InvoiceDetailModel.findById(id)
             .populate('productId')
-            .populate('sellerId', 'profile email')
+            .populate('sellerId', 'profile')
             .populate('invoiceId', 'userId');
         if (!foundInvoiceDetail) return null;
         // const doc = await foundInvoiceDetail.populate('productId');
