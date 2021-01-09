@@ -39,10 +39,10 @@ const invoiceDetail = new moongose.Schema(
     { timestamps: true }
 );
 
-// invoiceDetail.pre('find', function () {
-//     this.populate('sellerId', 'profile')
-//         .populate('productId', 'productName')
-//         // .populate('invoiceId');
-// });
+invoiceDetail.pre('find', function () {
+    this.populate('sellerId', 'profile')
+        .populate('productId', 'productName')
+        // .populate('invoiceId');
+});
 
 export const InvoiceDetailModel = moongose.model<IInvoiceDetail>('invoicedetail', invoiceDetail);
