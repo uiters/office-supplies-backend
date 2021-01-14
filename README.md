@@ -56,7 +56,7 @@ Nguyễn Trọng Tài - 17521002@gm.uit.edu.vn
 
 ## Cách cài đặt
 
-- `git checkout staging`
+- `git checkout update`
 - `npm i`
 - `npm run dev`
 
