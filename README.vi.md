@@ -36,7 +36,7 @@ Ngô Tấn Phát - 17520877@gm.uit.edu.vn
 
 Phan Thanh Hoàng - 17520519@gm.uit.edu.vn
 
-Nguyễn Trọng Tài - 17521002@gm.uit.edu.vn
+Trần Đình Thiện - 17521080@gm.uit.edu.vn
 
 ## Giấy phép
 
