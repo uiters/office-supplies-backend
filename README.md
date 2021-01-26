@@ -13,7 +13,7 @@ office supplies backend
 
 1. [License](#License)
 
-1. [Tiếng Việt](README.vi.md)
+1. [Vietnamese](README.vi.md)
 
 ## Install
 
